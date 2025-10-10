@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: 'export',
+  basePath: '/his-global-conclave-edition-2', // IMPORTANT for GitHub Pages
+  images: { unoptimized: true },
 };
 
 export default nextConfig;
