@@ -30,7 +30,7 @@ export default function CardFlip({
 
   return (
     <div
-      className="group relative h-[200px] w-full max-w-[200px] [perspective:2000px]"
+      className="group relative h-[200px] w-full max-w-[200px] [perspective:2000px] mb-8"
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
     >
@@ -120,8 +120,15 @@ export default function CardFlip({
             !isFlipped ? 'opacity-0' : 'opacity-100',
           )}
         >
+            <h3 className="mb-2 font-semibold leading-snug tracking-tight ">
+                {subtitle}
+            </h3>
+            <p className="text-sm">
+                {description}
+            </p>
+
           {/* Background gradient */}
-            <div className="from-primary/5 dark:from-primary/10 absolute inset-0 rounded-2xl bg-gradient-to-br via-transparent to-green-500/5 dark:to-green-500/10" />
+        <div className="from-primary/5 dark:from-primary/10 absolute inset-0 rounded-2xl bg-gradient-to-br via-transparent to-green-500/5 dark:to-green-500/10" />
 
           
         </div>

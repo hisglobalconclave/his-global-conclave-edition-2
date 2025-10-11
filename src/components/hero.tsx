@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
+import Logo from '@/components/logo';
 
 const colors = {
   50: '#f8f7f5',
@@ -96,45 +97,8 @@ export default function MinimalHero() {
   }, []);
 
   return (
-    <>
-       {/* Top tagline */}
-        <div className="text-center">
-          <h2
-            className="font-mono text-xs font-light tracking-[0.2em] uppercase opacity-80 md:text-sm flex flex-row items-center justify-center"
-            style={{ color: colors[200] }}
-          >
-            <div className='block text-center'>
-                <img className='h-[64px] w-[64px]' src="/his-global-conclave-edition-2/images/logo.svg" alt="Logo" />
-            </div>
-            <div className='flex flex-col'>
-                <div>
-                    <span className="word" data-delay="0">
-                    Hindustan
-                    </span>
-                    <span className="word" data-delay="200">
-                    International
-                    </span>
-                </div>
-                <div className="flex">
-                    <span className="word" data-delay="400">
-                    School
-                    </span>
-                    <span className="word" data-delay="600">
-                    -
-                    </span>
-                    <span className="word" data-delay="800">
-                    Karapakkam
-                    </span>
-                </div>
-            </div>
-          </h2>
-          <div
-            className="mt-4 h-px w-16 opacity-30"
-            style={{
-              background: `linear-gradient(to right, transparent, ${colors[200]}, transparent)`,
-            }}
-          ></div>
-        </div>
+    <div className='flex flex-col items-center justify-between min-h-screen'>
+        <div className='None'></div>
 
         {/* Main headline */}
         <div className="mx-auto max-w-5xl text-center">
@@ -143,19 +107,19 @@ export default function MinimalHero() {
             style={{ color: colors[50] }}
           >
             <div className="mb-4 md:mb-6">
-              <span className="word" data-delay="1600">
+              <span className="word" data-delay="1150">
                 HIS
               </span>
-              <span className="word" data-delay="1750">
+              <span className="word" data-delay="1300">
                 Global
               </span>
-              <span className="word" data-delay="1900">
+              <span className="word" data-delay="1450">
                 Conclave
               </span>
-              <span className="word" data-delay="2050">
+              <span className="word" data-delay="1700">
                 Edition
               </span>
-              <span className="word" data-delay="2200">
+              <span className="word" data-delay="1850">
                 2
               </span>
             </div>
@@ -163,13 +127,13 @@ export default function MinimalHero() {
               className="text-2xl leading-relaxed font-thin md:text-3xl lg:text-4xl"
               style={{ color: colors[200] }}
             >
-              <span className="word" data-delay="2600">
+              <span className="word" data-delay="2100">
                 Model
               </span>
-              <span className="word" data-delay="2750">
+              <span className="word" data-delay="2250">
                 United
               </span>
-              <span className="word" data-delay="2900">
+              <span className="word" data-delay="2400">
                 Nations
               </span>
             </div>
@@ -204,30 +168,30 @@ export default function MinimalHero() {
             className="font-mono text-xs font-light tracking-[0.2em] uppercase opacity-80 md:text-sm"
             style={{ color: colors[200] }}
           >
-            <span className="word" data-delay="3150">
+            <span className="word" data-delay="2650">
               Fostering
             </span>
-            <span className="word" data-delay="3300">
+            <span className="word" data-delay="2800">
               Global
             </span>
-            <span className="word" data-delay="3450">
+            <span className="word" data-delay="2950">
               Dialogue
             </span>
-            <span className="word" data-delay="3600">
+            <span className="word" data-delay="3200">
               for
             </span>
-            <span className="word" data-delay="3750">
+            <span className="word" data-delay="3350">
               a
             </span>
-            <span className="word" data-delay="3900">
+            <span className="word" data-delay="3500">
               Better
             </span>
-            <span className="word" data-delay="4050">
+            <span className="word" data-delay="3650">
               Future
             </span>
           </h2>
           <div
-            className="mt-6 flex justify-center space-x-4 opacity-0"
+            className="mt-6 flex justify-center pb-10 space-x-4 opacity-0"
             style={{
               animation: 'word-appear 1s ease-out forwards',
               animationDelay: '4.5s',
@@ -247,6 +211,6 @@ export default function MinimalHero() {
             ></div>
           </div>
         </div>
-    </>
+    </div>
   );
 }

@@ -139,6 +139,12 @@ body {
   animation-delay: 2s;
 }
 
+.highlighted-text {
+    text-shadow: 0 0 20px rgba(200, 180, 160, 0.5);
+    color: #c8b4a0;
+    transform: translateY(-2px);
+}
+
 @keyframes underline-grow {
   to {
     width: 100%;

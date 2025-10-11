@@ -5,13 +5,14 @@ import Unhcr from '@/components/unhcr';
 import Unsc from '@/components/unsc';
 import Unoosa from '@/components/unoosa';
 import Unodc from '@/components/unodc';
+import Cgsd from '@/components/cgsd';
 
 export interface PageDeciderProps {
-    page: 'hero' | 'uneso' | 'unhcr' | 'unodc' | 'unsc' | 'unoosa' | 'disec';
+    renderPage: 'hero' | 'uneso' | 'unhcr' | 'unodc' | 'unsc' | 'unoosa' | 'disec' | 'cgsd';
 }
 
-const renderedPage = (page: string) => {
-    switch (page) {
+const renderedPage = (renderPage: string) => {
+    switch (renderPage) {
         case 'unhcr':
             return <Unhcr />;
         case 'unodc':
@@ -24,6 +25,8 @@ const renderedPage = (page: string) => {
             return <Disec />;
         case 'uneso':
             return <Uneso />;
+        case 'cgsd':
+            return <Cgsd />;
         case 'hero':
             return <Hero />;
         default:
@@ -32,11 +35,11 @@ const renderedPage = (page: string) => {
 }
 
 
-export default function PageDecider({ page }: PageDeciderProps) {
+export default function PageDecider({ renderPage }: PageDeciderProps) {
   return (
     <>
       {
-        renderedPage(page)
+        renderedPage(renderPage)
       }
     </>
   );
