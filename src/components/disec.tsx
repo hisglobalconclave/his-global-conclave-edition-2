@@ -15,9 +15,9 @@ export default function Disec() {
                 <iframe src="https://drive.google.com/file/d/1uMVlV_41NPIMUWJJFDMqvjsylvCCQRhK/preview" className="w-full min-w-[300px] max-w-[500px] h-full min-h-[500px]" />
             </div>
             <div className="h-[80%] w-full max-w-[200px] items-center">
-                <CardFlip title="Person 1" subtitle="Role 1" imagePath="/path/to/image1.jpg" description="Description for Person 1" />
-                <CardFlip title="Person 2" subtitle="Role 2" imagePath="/path/to/image2.jpg" description="Description for Person 2" />
-                <CardFlip title="Person 3" subtitle="Role 3" imagePath="/path/to/image3.jpg" description="Description for Person 3" />
+                <CardFlip title="Person 1" subtitle="Role 1" imagePath="" description="Description for Person 1" />
+                <CardFlip title="Person 2" subtitle="Role 2" imagePath="" description="Description for Person 2" />
+                <CardFlip title="Person 3" subtitle="Role 3" imagePath="" description="Description for Person 3" />
             </div>
         </div>
     );
