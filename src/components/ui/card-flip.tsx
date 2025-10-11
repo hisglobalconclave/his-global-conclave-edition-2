@@ -11,21 +11,20 @@
  */
 
 import { cn } from '@/lib/utils';
-import { ArrowRight, Code2, Copy, Rocket, Zap } from 'lucide-react';
 import { useState } from 'react';
 
 export interface CardFlipProps {
   title?: string;
   subtitle?: string;
   description?: string;
-  picPath?: string;
+  imagePath?: string;
 }
 
 export default function CardFlip({
   title = 'Build MVPs Fast',
   subtitle = 'Launch your idea in record time',
   description = 'Copy, paste, customize—and launch your MVP faster than ever with our developer-first component library.',
-  picPath = '/public/assets/images/commitee/unesco.png',
+  imagePath = '/public/assets/images/commitee/unesco.png',
 }: CardFlipProps) {
   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -61,7 +60,7 @@ export default function CardFlip({
             isFlipped ? 'opacity-0' : 'opacity-100',
           )}
 
-          style={{ backgroundImage: `url(${picPath})`, backgroundSize: 'cover' }}
+          style={{ backgroundImage: `url(${imagePath})`, backgroundSize: 'cover' }}
         >
           {/* Background gradient effect */}
           <div className="from-primary/5 dark:from-primary/10 absolute inset-0 bg-gradient-to-br via-transparent to-green-500/5 dark:to-green-500/10" />

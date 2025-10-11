@@ -100,33 +100,33 @@ export default function MinimalHero() {
        {/* Top tagline */}
         <div className="text-center">
           <h2
-            className="font-mono text-xs font-light tracking-[0.2em] uppercase opacity-80 md:text-sm"
+            className="font-mono text-xs font-light tracking-[0.2em] uppercase opacity-80 md:text-sm flex flex-row items-center justify-center"
             style={{ color: colors[200] }}
           >
-            <span className="word" data-delay="0">
-              Welcome
-            </span>
-            <span className="word" data-delay="200">
-              to
-            </span>
-            <span className="word" data-delay="400">
-              <b>StackPilot</b>
-            </span>
-            <span className="word" data-delay="600">
-              — 
-            </span>
-            <span className="word" data-delay="800">
-              Powering
-            </span>
-            <span className="word" data-delay="1000">
-              your
-            </span>
-            <span className="word" data-delay="1200">
-              digital
-            </span>
-            <span className="word" data-delay="1400">
-              transformation.
-            </span>
+            <div className='block text-center'>
+                <img className='h-[64px] w-[64px]' src="/his-global-conclave-edition-2/images/logo.svg" alt="Logo" />
+            </div>
+            <div className='flex flex-col'>
+                <div>
+                    <span className="word" data-delay="0">
+                    Hindustan
+                    </span>
+                    <span className="word" data-delay="200">
+                    International
+                    </span>
+                </div>
+                <div className="flex">
+                    <span className="word" data-delay="400">
+                    School
+                    </span>
+                    <span className="word" data-delay="600">
+                    -
+                    </span>
+                    <span className="word" data-delay="800">
+                    Karapakkam
+                    </span>
+                </div>
+            </div>
           </h2>
           <div
             className="mt-4 h-px w-16 opacity-30"
@@ -205,22 +205,25 @@ export default function MinimalHero() {
             style={{ color: colors[200] }}
           >
             <span className="word" data-delay="3150">
-              Real-time
+              Fostering
             </span>
             <span className="word" data-delay="3300">
-              analytics,
+              Global
             </span>
             <span className="word" data-delay="3450">
-              seamless
+              Dialogue
             </span>
             <span className="word" data-delay="3600">
-              integrations,
+              for
             </span>
             <span className="word" data-delay="3750">
-              enterprise-grade
+              a
             </span>
             <span className="word" data-delay="3900">
-              security.
+              Better
+            </span>
+            <span className="word" data-delay="4050">
+              Future
             </span>
           </h2>
           <div

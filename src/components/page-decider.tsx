@@ -1,4 +1,4 @@
-import HeroText from '@/components/hero-text';
+import Hero from '@/components/hero';
 import Uneso from '@/components/uneso';
 import Disec from '@/components/disec';
 import Unhcr from '@/components/unhcr';
@@ -25,9 +25,9 @@ const renderedPage = (page: string) => {
         case 'uneso':
             return <Uneso />;
         case 'hero':
-            return <HeroText />;
+            return <Hero />;
         default:
-            return <HeroText />;
+            return <Hero />;
     }
 }
 
