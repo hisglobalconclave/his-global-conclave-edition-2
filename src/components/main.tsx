@@ -24,25 +24,81 @@ const colors = {
 export default function MinimalHero() {
   const [page, setPage] = useState<'hero' | 'uneso' | 'unhcr' | 'unodc' | 'unsc' | 'unoosa' | 'disec' | 'cgsd'>("hero");
   const gradientRef = useRef<HTMLDivElement>(null);
+  const introPlayedRef = useRef(false);
+  const hoverHandlersAttachedRef = useRef(false);
   useEffect(() => {
     // Only run the hero-specific DOM effects when the hero is visible
     if (page !== 'hero') return;
-    // Animate words
-    const animatedElements = document.querySelectorAll<HTMLElement>('.word, .committee-icon-animation, .custom-button, .highlighted-text');
-    animatedElements.forEach((element) => {
-      const delay = parseInt(element.getAttribute('data-delay') || '0', 10);
-      setTimeout(() => {
-        element.style.animation = 'word-appear 0.8s ease-out forwards';
-      }, delay);
-    });
+    // Select elements used by the intro animations and for hover behaviour
+    const animatedElements = document.querySelectorAll<HTMLElement>(
+      '.word, .committee-icon-animation, .custom-button, .highlighted-text'
+    );
 
-    document.querySelectorAll<HTMLElement>('.icons').forEach((element) => {
+  // Only run the intro animation sequence once per page load
+  if (!introPlayedRef.current) {
+      animatedElements.forEach((element) => {
         const delay = parseInt(element.getAttribute('data-delay') || '0', 10);
         setTimeout(() => {
-            element.style.opacity = '1';
-            element.style.animation = 'var(--animate-bounce)';
+          element.style.animation = 'word-appear 0.8s ease-out forwards';
         }, delay);
-    });
+      });
+
+      document.querySelectorAll<HTMLElement>('.icons').forEach((element) => {
+        const delay = parseInt(element.getAttribute('data-delay') || '0', 10);
+        setTimeout(() => {
+          element.style.opacity = '1';
+          element.style.animation = 'var(--animate-bounce)';
+        }, delay);
+      });
+
+      // Mark that the intro has been played for this page load
+      introPlayedRef.current = true;
+
+      // figure out the longest delay from data-delay attributes so we can
+      // add the `.intro-done` CSS class after the animations complete
+      try {
+        const delays: number[] = [];
+        animatedElements.forEach((el) => {
+          const d = parseInt(el.getAttribute('data-delay') || '0', 10);
+          delays.push(isNaN(d) ? 0 : d);
+        });
+        document.querySelectorAll<HTMLElement>('.icons').forEach((el) => {
+          const d = parseInt(el.getAttribute('data-delay') || '0', 10);
+          delays.push(isNaN(d) ? 0 : d);
+        });
+
+        const maxDelay = delays.length ? Math.max(...delays) : 0;
+        // Allow animation duration (0.8s) + small buffer (200ms)
+        const bufferMs = 1200;
+        const timeout = maxDelay + bufferMs;
+        const timer = window.setTimeout(() => {
+          document.documentElement.classList.add('intro-done');
+        }, timeout);
+
+        // cleanup: if the effect runs again, clear the timeout
+        return () => {
+          clearTimeout(timer);
+          document.documentElement.classList.remove('intro-done');
+        };
+      } catch (err) {
+        // ensure we still set the intro-done flag even on error
+        document.documentElement.classList.add('intro-done');
+      }
+    } else {
+      // If the intro already ran earlier in this session, make sure
+      // newly-mounted elements appear in their final, non-animated state
+      animatedElements.forEach((element) => {
+        // cancel any animation and show final state
+        element.style.animation = 'none';
+        element.style.opacity = '1';
+        element.style.transform = 'none';
+      });
+
+      document.querySelectorAll<HTMLElement>('.icons').forEach((element) => {
+        element.style.opacity = '1';
+        element.style.animation = 'none';
+      });
+    }
 
     // Mouse gradient
     const gradient = gradientRef.current;
@@ -59,15 +115,18 @@ export default function MinimalHero() {
     document.addEventListener('mousemove', onMouseMove);
     document.addEventListener('mouseleave', onMouseLeave);
 
-    // Word hover effects
-    animatedElements.forEach((element) => {
-      element.addEventListener('mouseenter', () => {
-        element.style.textShadow = '0 0 20px rgba(200, 180, 160, 0.5)';
+    // Word hover effects - attach handlers only once to avoid duplicating listeners
+    if (!hoverHandlersAttachedRef.current) {
+      animatedElements.forEach((element) => {
+        element.addEventListener('mouseenter', () => {
+          element.style.textShadow = '0 0 20px rgba(200, 180, 160, 0.5)';
+        });
+        element.addEventListener('mouseleave', () => {
+          element.style.textShadow = 'none';
+        });
       });
-      element.addEventListener('mouseleave', () => {
-        element.style.textShadow = 'none';
-      });
-    });
+      hoverHandlersAttachedRef.current = true;
+    }
 
     // Click ripple effect
     function onClick(e: MouseEvent) {
@@ -170,7 +229,7 @@ export default function MinimalHero() {
                 {/* Main headline */}
                 <div className="relative mx-auto max-w-5xl text-center">
                     <h1
-                        className="relative text-decoration text-3xl leading-tight font-extralight tracking-tight md:text-5xl lg:text-6xl"
+                        className="relative text-decoration text-3xl leading-tight font-extralight tracking-tight md:text-5xl lg:text-6xl 2xl:text-9xl"
                         style={{ color: colors[50] }}
                     >
                         <div className="mb-4 md:mb-6">
@@ -195,7 +254,7 @@ export default function MinimalHero() {
                             </div>
                         </div>
                         <div
-                            className="text-2xl leading-relaxed font-thin md:text-3xl lg:text-4xl"
+                            className="text-2xl leading-relaxed font-thin md:text-3xl lg:text-4xl 2xl:text-7xl"
                             style={{ color: colors[200] }}
                         >
                             <span className="word" data-delay="2100">
@@ -210,8 +269,8 @@ export default function MinimalHero() {
                         </div>
                         <div className="absolute custom-button -bottom-[70px] left-[50%] translate translate-x-[-50%] flex justify-center text-center" data-delay="2500">
                             <HoverBorderGradient
-                                className="mono-label text-sm custom-button"
-                                onClick={() => window.open("https://example.com", "_blank")}
+                                className="mono-label text-sm custom-button 2xl:text-xl"
+                                onClick={() => window.open("https://forms.gle/Vcmu4Wq2qEURGejk6", "_blank")}
                             >
                                 <span style={{ whiteSpace: 'nowrap' }}>Register Now!</span>
                             </HoverBorderGradient>
@@ -561,7 +620,12 @@ export default function MinimalHero() {
             {/* Hero Text */}
             <div className='relative flex flex-col items-center justify-between w-full h-screen'>
                 <div className='None h-[110px]'></div>
+                <button
                 
+                    onClick={() => setPage('hero')}
+                >
+                    Go back
+                </button>
                 <PageDecider renderPage={page} />
 
             </div>

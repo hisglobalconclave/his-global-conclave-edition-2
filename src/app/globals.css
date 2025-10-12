@@ -197,6 +197,24 @@ img {
     transition: all 0.3s ease;
 }
 
+/* When the intro has been played, add this class to the root to prevent
+   re-running intro animations on returning to the hero. This avoids
+   inline style manipulation and prevents flicker. */
+.intro-done .word,
+.intro-done .committee-icon-animation,
+.intro-done .custom-button,
+.intro-done .highlighted-text {
+  animation: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+.intro-done .icons {
+  animation: none !important;
+  opacity: 1 !important;
+}
+
 
 @keyframes underline-grow {
   to {
