@@ -2,7 +2,7 @@
 
 import React, { useEffect, useId, useRef, useState } from "react";
 import { MousePointerClick } from 'lucide-react';
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@hooks/use-outside-click";
 
 export interface ExpandableCardProps {

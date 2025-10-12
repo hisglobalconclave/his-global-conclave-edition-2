@@ -30,8 +30,6 @@
     "gh-pages": "^5",
     "tailwindcss": "^4",
     "typescript": "^5",
-    "tailwind-merge": "^3.3.1",
-    "motion": "^10.15.3",
-    "motion-react": "^10.15.3"
+    "tailwind-merge": "^3.3.1"
   }
 }
