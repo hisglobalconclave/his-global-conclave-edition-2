@@ -25,11 +25,11 @@ export default function MinimalHero() {
     // Only run the hero-specific DOM effects when the hero is visible
     if (page !== 'hero') return;
     // Animate words
-    const words = document.querySelectorAll<HTMLElement>('.word');
-    words.forEach((word) => {
-      const delay = parseInt(word.getAttribute('data-delay') || '0', 10);
+    const animatedElements = document.querySelectorAll<HTMLElement>('.word, .committee-icon-animation');
+    animatedElements.forEach((element) => {
+      const delay = parseInt(element.getAttribute('data-delay') || '0', 10);
       setTimeout(() => {
-        word.style.animation = 'word-appear 0.8s ease-out forwards';
+        element.style.animation = 'word-appear 0.8s ease-out forwards';
       }, delay);
     });
 
@@ -49,12 +49,12 @@ export default function MinimalHero() {
     document.addEventListener('mouseleave', onMouseLeave);
 
     // Word hover effects
-    words.forEach((word) => {
-      word.addEventListener('mouseenter', () => {
-        word.style.textShadow = '0 0 20px rgba(200, 180, 160, 0.5)';
+    animatedElements.forEach((element) => {
+      element.addEventListener('mouseenter', () => {
+        element.style.textShadow = '0 0 20px rgba(200, 180, 160, 0.5)';
       });
-      word.addEventListener('mouseleave', () => {
-        word.style.textShadow = 'none';
+      element.addEventListener('mouseleave', () => {
+        element.style.textShadow = 'none';
       });
     });
 
@@ -105,7 +105,7 @@ export default function MinimalHero() {
       {page === 'hero' ? (
         <>
           <svg
-            className="absolute z-[-1] inset-0 h-full w-full"
+            className="absolute inset-0 h-full w-full"
             xmlns="http://www.w3.org/2000/svg"
           >
             <defs>
@@ -149,16 +149,119 @@ export default function MinimalHero() {
 
           <Logo />
 
-          <div className='h-full w-full min-h-screen flex flex-col md:flex-row items-center justify-start md:justify-center md:gap-20 z-10 px-4'>
-            <div className='md:flex md:flex-col md:items-center md:justify-start hidden'>
-              <button onClick={() => setPage('uneso')}>Uneso</button>
-              <button onClick={() => setPage('unhcr')}>Unhcr</button>
+          <div className='h-full w-full min-h-screen flex flex-col md:flex-row items-center justify-start md:justify-center z-10 px-4'>
+            <div className='md:flex md:flex-col hidden ps-20 pe-10 pt-30'>
+                
+                {/* Animated SVG line */}
+                {/* <svg
+                    width="500px"
+                    height="60"
+                    className="absolute left-0 top-0"
+                    style={{ pointerEvents: 'none', zIndex: 1 }}
+                >
+                    <polyline
+                        points="50,30 20,0 0,0"
+                        stroke="#ffffff"
+                        strokeWidth="4"
+                        fill="none"
+                    />
+                </svg>    */} 
+                <button onClick={() => setPage('uneso')} className="committee-icon-animation relative flex items-center group" data-delay="4100">
+                    {/* Committee icon */}
+                    <img
+                        className="committee-icon"
+                        src="/his-global-conclave-edition-2/images/un_emblem_blue.webp"
+                        alt=""
+                        style={{ zIndex: 2 }}
+                        
+                    />
+                    <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNESO</span>
+                </button>
+              <button onClick={() => setPage('unhcr')} className="committee-icon-animation relative flex items-center group mt-20" data-delay="3800">
+                {/* Committee icon */}
+                <img
+                    className="committee-icon"
+                    src="/his-global-conclave-edition-2/images/un_emblem_blue.webp"
+                    alt=""
+                    style={{ zIndex: 2 }}
+                />
+                <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNHCR</span>
+              </button>
             </div>
             <div className='flex flex-col items-center justify-end h-screen'>
-              <div className='md:flex md:flex-col md:items-center md:justify-start hidden'>
-                <button onClick={() => setPage('unoosa')}>Unoosa</button>
-                <button onClick={() => setPage('disec')}>Disec</button>
-                <button onClick={() => setPage('cgsd')}>CGSD</button>
+              <div className='md:flex w-full flex-row items-center justify-between hidden'>
+                {/* Animated SVG line */}
+                {/* <svg
+                    width="500px"
+                    height="60"
+                    className="absolute left-0 top-0"
+                    style={{ pointerEvents: 'none', zIndex: 1 }}
+                >
+                    <polyline
+                        points="50,30 20,0 0,0"
+                        stroke="#ffffff"
+                        strokeWidth="4"
+                        fill="none"
+                    />
+                </svg> */}
+                <button onClick={() => setPage('unoosa')} className="committee-icon-animation relative flex items-center group translate -translate-x-10" data-delay="4500">
+                    {/* Committee icon */}
+                    <img
+                        className="committee-icon"
+                        src="/his-global-conclave-edition-2/images/un_emblem_blue.webp"
+                        alt=""
+                        style={{ zIndex: 2 }}
+                    />
+                    <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNOOSA</span>
+                </button>
+                {/* Animated SVG line */}
+                {/* <svg
+                    width="500px"
+                    height="60"
+                    className="absolute left-0 top-0"
+                    style={{ pointerEvents: 'none', zIndex: 1 }}
+                >
+                    <polyline
+                        points="50,30 20,0 0,0"
+                        stroke="#ffffff"
+                        strokeWidth="4"
+                        fill="none"
+                    />
+                </svg>   */}  
+                <button onClick={() => setPage('disec')} className="committee-icon-animation relative flex items-center group pb-20" data-delay="4800">
+                    {/* Committee icon */}
+                    <img
+                        className="committee-icon"
+                        src="/his-global-conclave-edition-2/images/un_emblem_blue.webp"
+                        alt=""
+                        style={{ zIndex: 2 }}
+                    />
+                    <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8 pb-20'>DISEC</span>
+                </button>
+                {/* Animated SVG line */}
+                {/* <svg
+                    width="500px"
+                    height="60"
+                    className="absolute left-0 top-0"
+                    style={{ pointerEvents: 'none', zIndex: 1 }}
+                >
+                    <polyline
+                        points="50,30 20,0 0,0"
+                        stroke="#ffffff"
+                        strokeWidth="4"
+                        fill="none"
+                    />
+                </svg>   */}  
+                <button onClick={() => setPage('cgsd')} className="committee-icon-animation relative flex items-center group translate translate-x-10" data-delay="5100">
+                    {/* Committee icon */}
+                    <img
+                        className="committee-icon"
+                        src="/his-global-conclave-edition-2/images/un_emblem_blue.webp"
+                        alt=""
+                        style={{ zIndex: 2 }}
+                    />
+                    <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>CGSD</span>
+                </button>
               </div>
               <div className='flex flex-col items-center justify-between'>
                 <div className='None'></div>
@@ -170,21 +273,25 @@ export default function MinimalHero() {
                         style={{ color: colors[50] }}
                     >
                         <div className="mb-4 md:mb-6">
-                            <span className="word" data-delay="1150">
-                                HIS
-                            </span>
-                            <span className="word" data-delay="1300">
-                                Global
-                            </span>
-                            <span className="word" data-delay="1450">
-                                Conclave
-                            </span>
-                            <span className="word" data-delay="1700">
-                                Edition
-                            </span>
-                            <span className="word" data-delay="1850">
-                                2
-                            </span>
+                            <div className='block'>
+                                <span className="word" data-delay="1150">
+                                    HIS
+                                </span>
+                                <span className="word" data-delay="1300">
+                                    Global
+                                </span>
+                            </div>
+                            <div className='block'>
+                                <span className="word" data-delay="1450">
+                                    Conclave
+                                </span>
+                                <span className="word" data-delay="1700">
+                                    Edition
+                                </span>
+                                <span className="word" data-delay="1850">
+                                    2
+                                </span>
+                            </div>
                         </div>
                         <div
                             className="text-2xl leading-relaxed font-thin md:text-3xl lg:text-4xl"
@@ -276,9 +383,27 @@ export default function MinimalHero() {
                 </div>
               </div>
             </div>
-            <div className="md:flex md:flex-col md:items-center md:justify-start hidden">
-              <button onClick={() => setPage('unodc')}>Unodc</button>
-              <button onClick={() => setPage('unsc')}>Unsc</button>
+            <div className="md:flex md:flex-col md:items-center md:justify-start hidden pe-20 ps-10 pt-30">
+              <button onClick={() => setPage('unodc')} className="committee-icon-animation relative flex items-center group" data-delay="5400">
+                {/* Committee icon */}
+                <img
+                    className="committee-icon"
+                    src="/his-global-conclave-edition-2/images/un_emblem_blue.webp"
+                    alt=""
+                    style={{ zIndex: 2 }}
+                />
+                <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNODC</span>
+            </button>
+              <button onClick={() => setPage('unsc')} className="committee-icon-animation relative flex items-center group mt-20" data-delay="5700">
+                {/* Committee icon */}
+                <img
+                    className="committee-icon"
+                    src="/his-global-conclave-edition-2/images/un_emblem_blue.webp"
+                    alt=""
+                    style={{ zIndex: 2 }}
+                />
+                <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNSC</span>
+            </button>
             </div>
           </div>
 
