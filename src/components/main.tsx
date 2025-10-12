@@ -5,6 +5,7 @@ import PageDecider from '@/components/page-decider';
 import Logo from '@/components/logo';
 import { HoverBorderGradient } from '@/components/ui/hover-border-gradient';
 import Image from 'next/image';
+import { Mouse } from 'lucide-react';
 
 
 const colors = {
@@ -33,6 +34,14 @@ export default function MinimalHero() {
       setTimeout(() => {
         element.style.animation = 'word-appear 0.8s ease-out forwards';
       }, delay);
+    });
+
+    document.querySelectorAll<HTMLElement>('.icons').forEach((element) => {
+        const delay = parseInt(element.getAttribute('data-delay') || '0', 10);
+        setTimeout(() => {
+            element.style.opacity = '1';
+            element.style.animation = 'var(--animate-bounce)';
+        }, delay);
     });
 
     // Mouse gradient
@@ -156,11 +165,11 @@ export default function MinimalHero() {
             
 
             {/* Hero Text */}
-            <div className='flex flex-col items-center justify-between w-full h-screen'>
+            <div className='relative flex flex-col items-center justify-between w-full h-screen'>
                 <div className='None h-[110px]'></div>
 
                 {/* Main headline */}
-                <div className="relative mx-auto max-w-5xl text-center mt-50 md:mt-0 md:mb-20">
+                <div className="relative mx-auto max-w-5xl text-center">
                     <h1
                         className="relative text-decoration text-3xl leading-tight font-extralight tracking-tight md:text-5xl lg:text-6xl"
                         style={{ color: colors[50] }}
@@ -320,12 +329,10 @@ export default function MinimalHero() {
                 </div>
 
                 {/* Bottom tagline */}
-                <div className="text-center mt-50 md:mt-0">
+                <div className="text-center">
                     <div
                         className="mb-4 h-px w-16 opacity-30"
-                        style={{
-                        background: `linear-gradient(to right, transparent, ${colors[200]}, transparent)`,
-                        }}
+                        style={{background: `linear-gradient(to right, transparent, ${colors[200]}, transparent)`}}
                     ></div>
                     <h2
                         className="font-mono text-xs font-light tracking-[0.2em] uppercase opacity-80 md:text-sm"
@@ -373,7 +380,123 @@ export default function MinimalHero() {
                         style={{ background: colors[200] }}
                         ></div>
                     </div>
+
+                    
                 </div>
+
+                {/* Scroll Icon */}
+                <Mouse className="icons absolute bottom-4 right-1 animate-bounce md:hidden" data-delay="3650" />
+            </div>
+          </div>
+
+          {/* Mobile Committee Icons */}
+          <div className='flex flex-col justify-between min-h-screen md:hidden'>
+            {/* Left Side Committee Icons */}
+            <div className='flex justify-between m-10 items-center'>
+                
+                {/* Animated SVG line */}
+                {/* <svg
+                    width="500px"
+                    height="60"
+                    className="absolute left-0 top-0"
+                    style={{ pointerEvents: 'none', zIndex: 1 }}
+                >
+                    <polyline
+                        points="50,30 20,0 0,0"
+                        stroke="#ffffff"
+                        strokeWidth="4"
+                        fill="none"
+                    />
+                </svg>    */} 
+                <button onClick={() => setPage('uneso')} className="committee-icon-animation relative flex items-center group" data-delay="4100">
+                    {/* Committee icon */}
+                    <Image
+                        width={64} height={64}
+                        className="committee-icon"
+                        src="/his-global-conclave-edition-2/images/un_emblem.png"
+                        alt=""
+                        style={{ zIndex: 2 }}
+                        
+                    />
+                    <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNESO</span>
+                </button>
+                <button onClick={() => setPage('unhcr')} className="committee-icon-animation relative flex items-center group" data-delay="3800">
+                    {/* Committee icon */}
+                    <Image
+                        width={64} height={64}
+                        className="committee-icon"
+                        src="/his-global-conclave-edition-2/images/un_emblem.png"
+                        alt=""
+                        style={{ zIndex: 2 }}
+                    />
+                    <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNHCR</span>
+                </button>
+            </div>
+
+            {/* Center Side Committee Icons */}
+            <div className='flex flex-col items-center'>
+
+                <button onClick={() => setPage('unoosa')} className="committee-icon-animation relative flex items-center group" data-delay="4500">
+                    {/* Committee icon */}
+                    <Image
+                        width={64} height={64}
+                        className="committee-icon"
+                        src="/his-global-conclave-edition-2/images/un_emblem.png"
+                        alt=""
+                        style={{ zIndex: 2 }}
+                    />
+                    <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNOOSA</span>
+                </button>
+
+                <button onClick={() => setPage('disec')} className="committee-icon-animation relative flex items-center group my-[30%]" data-delay="4800">
+                    {/* Committee icon */}
+                    <Image
+                        width={64} height={64}
+                        className="committee-icon"
+                        src="/his-global-conclave-edition-2/images/un_emblem.png"
+                        alt=""
+                        style={{ zIndex: 2 }}
+                    />
+                    <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>DISEC</span>
+                </button>
+
+                <button onClick={() => setPage('cgsd')} className="committee-icon-animation relative flex items-center group" data-delay="5100">
+                    {/* Committee icon */}
+                    <Image
+                        width={64} height={64}
+                        className="committee-icon"
+                        src="/his-global-conclave-edition-2/images/un_emblem.png"
+                        alt=""
+                        style={{ zIndex: 2 }}
+                    />
+                    <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>CGSD</span>
+                </button>
+            </div>
+
+            {/* Right Side Committee Icons */}
+            <div className="flex justify-between m-10 mb-30 items-center">
+                <button onClick={() => setPage('unodc')} className="committee-icon-animation relative flex items-center group" data-delay="5400">
+                    {/* Committee icon */}
+                    <Image
+                        width={64} height={64}
+                        className="committee-icon"
+                        src="/his-global-conclave-edition-2/images/un_emblem.png"
+                        alt=""
+                        style={{ zIndex: 2 }}
+                    />
+                    <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNODC</span>
+                </button>
+                <button onClick={() => setPage('unsc')} className="committee-icon-animation relative flex items-center group" data-delay="5700">
+                    {/* Committee icon */}
+                    <Image
+                        width={64} height={64}
+                        className="committee-icon"
+                        src="/his-global-conclave-edition-2/images/un_emblem.png"
+                        alt=""
+                        style={{ zIndex: 2 }}
+                    />
+                    <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNSC</span>
+                </button>
             </div>
           </div>
 
