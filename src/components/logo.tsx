@@ -1,5 +1,5 @@
 'use client';
-
+import Image from 'next/image';
 
 export default function Logo() {
     return (
@@ -11,7 +11,7 @@ export default function Logo() {
             style={{ color: '#c8b4a0' }}
           >
             <div className='block text-center'>
-                <img className='h-[64px] w-[64px] max-w-[64px] word' data-delay="0" src="/his-global-conclave-edition-2/images/logo.svg" alt="Logo" />
+                <Image className='h-[64px] w-[64px] max-w-[64px] word' data-delay="0" src="/his-global-conclave-edition-2/images/logo.svg" alt="Logo" />
             </div>
             <div className='flex flex-col'>
                 <div className="flex">

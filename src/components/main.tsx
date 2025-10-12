@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import PageDecider from '@/components/page-decider';
 import Logo from '@/components/logo';
+import Image from 'next/image';
 
 
 const colors = {
@@ -219,7 +220,7 @@ export default function MinimalHero() {
                         </svg>    */} 
                         <button onClick={() => setPage('uneso')} className="committee-icon-animation relative flex items-center group" data-delay="4100">
                             {/* Committee icon */}
-                            <img
+                            <Image
                                 className="committee-icon"
                                 src="/his-global-conclave-edition-2/images/un_emblem_blue.webp"
                                 alt=""
@@ -230,7 +231,7 @@ export default function MinimalHero() {
                         </button>
                         <button onClick={() => setPage('unhcr')} className="committee-icon-animation relative flex items-center group mt-30" data-delay="3800">
                             {/* Committee icon */}
-                            <img
+                            <Image
                                 className="committee-icon"
                                 src="/his-global-conclave-edition-2/images/un_emblem_blue.webp"
                                 alt=""
@@ -245,7 +246,7 @@ export default function MinimalHero() {
 
                         <button onClick={() => setPage('unoosa')} className="committee-icon-animation relative flex items-center group translate -translate-x-10" data-delay="4500">
                             {/* Committee icon */}
-                            <img
+                            <Image
                                 className="committee-icon"
                                 src="/his-global-conclave-edition-2/images/un_emblem_blue.webp"
                                 alt=""
@@ -256,7 +257,7 @@ export default function MinimalHero() {
 
                         <button onClick={() => setPage('disec')} className="committee-icon-animation relative flex items-center group pb-20" data-delay="4800">
                             {/* Committee icon */}
-                            <img
+                            <Image
                                 className="committee-icon"
                                 src="/his-global-conclave-edition-2/images/un_emblem_blue.webp"
                                 alt=""
@@ -267,7 +268,7 @@ export default function MinimalHero() {
 
                         <button onClick={() => setPage('cgsd')} className="committee-icon-animation relative flex items-center group translate translate-x-10" data-delay="5100">
                             {/* Committee icon */}
-                            <img
+                            <Image
                                 className="committee-icon"
                                 src="/his-global-conclave-edition-2/images/un_emblem_blue.webp"
                                 alt=""
@@ -281,7 +282,7 @@ export default function MinimalHero() {
                     <div className="absolute right-side-committee-icons md:flex md:flex-col hidden">
                         <button onClick={() => setPage('unodc')} className="committee-icon-animation relative flex items-center group" data-delay="5400">
                             {/* Committee icon */}
-                            <img
+                            <Image
                                 className="committee-icon"
                                 src="/his-global-conclave-edition-2/images/un_emblem_blue.webp"
                                 alt=""
@@ -291,7 +292,7 @@ export default function MinimalHero() {
                         </button>
                         <button onClick={() => setPage('unsc')} className="committee-icon-animation relative flex items-center group mt-30" data-delay="5700">
                             {/* Committee icon */}
-                            <img
+                            <Image
                                 className="committee-icon"
                                 src="/his-global-conclave-edition-2/images/un_emblem_blue.webp"
                                 alt=""

@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useEffect, useId, useRef, useState } from "react";
-import { MousePointerClick } from 'lucide-react';
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@hooks/use-outside-click";
+import Image from "next/image";
 
 export interface ExpandableCardProps {
   title: string;
@@ -79,7 +79,7 @@ export function ExpandableCard({
               className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
               <motion.div layoutId={`image-${title}-${id}`}>
-                <img
+                <Image
                   width={200}
                   height={200}
                   src={src}
@@ -142,7 +142,7 @@ export function ExpandableCard({
       >
         <div className="flex gap-4 flex-col max-w-[200px] w-full">
           <motion.div layoutId={`image-${title}-${id}`}>
-            <img
+            <Image
               width={100}
               height={100}
               src={src}

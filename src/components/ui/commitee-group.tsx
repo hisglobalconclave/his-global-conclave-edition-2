@@ -7,30 +7,6 @@ interface CommiteeGroupProps {
 }
 
 export default function CommiteeGroup({ direction, name, logoPath }: CommiteeGroupProps) {
-    const lineVariants = {
-        initial: {
-            opacity: 0,
-            y: direction === 'up' ? 20 : direction === 'down' ? -20 : 0,
-            x: direction === 'left' ? 20 : direction === 'right' ? -20 : 0,
-        },
-        animate: {
-            opacity: 1,
-            y: 0,
-            x: 0,
-        },
-    };
-    const textVariants = {
-        initial: {
-            opacity: 0,
-            y: direction === 'up' ? 20 : direction === 'down' ? -20 : 0,
-            x: direction === 'left' ? 20 : direction === 'right' ? -20 : 0,
-        },
-        animate: {
-            opacity: 1,
-            y: 0,
-            x: 0,
-        },
-    };
     return (
         <div className="relative w-200 h-200">
             <motion.img

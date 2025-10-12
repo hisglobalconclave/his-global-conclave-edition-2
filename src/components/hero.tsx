@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
-import Logo from '@/components/logo';
 
 const colors = {
   50: '#f8f7f5',
