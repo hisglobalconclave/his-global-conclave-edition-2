@@ -114,6 +114,7 @@ export default function MinimalHero() {
   return (
     <div className="font-primary relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-[#1a1d18] via-black to-[#2a2e26] text-[#e6e1d7]">
       {page === 'hero' ? (
+        /* Hero Page */
         <>
             {/* Background SVG grid and animated lines/dots */}
           <svg
@@ -162,8 +163,6 @@ export default function MinimalHero() {
           <Logo />
 
           <div className='h-full w-full min-h-screen px-4'>
-            
-
             {/* Hero Text */}
             <div className='relative flex flex-col items-center justify-between w-full h-screen'>
                 <div className='None h-[110px]'></div>
@@ -236,7 +235,7 @@ export default function MinimalHero() {
                                 fill="none"
                             />
                         </svg>    */} 
-                        <button onClick={() => setPage('uneso')} className="committee-icon-animation relative flex items-center group" data-delay="4100">
+                        <button onClick={() => setPage('uneso')} className="committee-icon-animation relative flex items-center group" data-delay="3900">
                             {/* Committee icon */}
                             <Image
                                 width={64} height={64}
@@ -248,7 +247,7 @@ export default function MinimalHero() {
                             />
                             <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNESO</span>
                         </button>
-                        <button onClick={() => setPage('unhcr')} className="committee-icon-animation relative flex items-center group mt-30" data-delay="3800">
+                        <button onClick={() => setPage('unhcr')} className="committee-icon-animation relative flex items-center group mt-30" data-delay="3700">
                             {/* Committee icon */}
                             <Image
                                 width={64} height={64}
@@ -264,7 +263,7 @@ export default function MinimalHero() {
                     {/* Center Side Committee Icons */}
                     <div className='absolute center-side-committee-icons md:flex w-full flex-row items-center justify-between hidden'>
 
-                        <button onClick={() => setPage('unoosa')} className="committee-icon-animation relative flex items-center group translate -translate-x-10" data-delay="4500">
+                        <button onClick={() => setPage('unoosa')} className="committee-icon-animation relative flex items-center group translate -translate-x-10" data-delay="4100">
                             {/* Committee icon */}
                             <Image
                                 width={64} height={64}
@@ -276,7 +275,7 @@ export default function MinimalHero() {
                             <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNOOSA</span>
                         </button>
 
-                        <button onClick={() => setPage('disec')} className="committee-icon-animation relative flex items-center group mb-20" data-delay="4800">
+                        <button onClick={() => setPage('disec')} className="committee-icon-animation relative flex items-center group mb-20" data-delay="4300">
                             {/* Committee icon */}
                             <Image
                                 width={64} height={64}
@@ -288,7 +287,7 @@ export default function MinimalHero() {
                             <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>DISEC</span>
                         </button>
 
-                        <button onClick={() => setPage('cgsd')} className="committee-icon-animation relative flex items-center group translate translate-x-10" data-delay="5100">
+                        <button onClick={() => setPage('cgsd')} className="committee-icon-animation relative flex items-center group translate translate-x-10" data-delay="4500">
                             {/* Committee icon */}
                             <Image
                                 width={64} height={64}
@@ -303,7 +302,7 @@ export default function MinimalHero() {
 
                     {/* Right Side Committee Icons */}
                     <div className="absolute right-side-committee-icons md:flex md:flex-col hidden">
-                        <button onClick={() => setPage('unodc')} className="committee-icon-animation relative flex items-center group" data-delay="5400">
+                        <button onClick={() => setPage('unodc')} className="committee-icon-animation relative flex items-center group" data-delay="4700">
                             {/* Committee icon */}
                             <Image
                                 width={64} height={64}
@@ -314,7 +313,7 @@ export default function MinimalHero() {
                             />
                             <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNODC</span>
                         </button>
-                        <button onClick={() => setPage('unsc')} className="committee-icon-animation relative flex items-center group mt-30" data-delay="5700">
+                        <button onClick={() => setPage('unsc')} className="committee-icon-animation relative flex items-center group mt-30" data-delay="4900">
                             {/* Committee icon */}
                             <Image
                                 width={64} height={64}
@@ -511,16 +510,61 @@ export default function MinimalHero() {
         </>
       ) : (
         // Committee page view replaces the hero when a committee is selected
-        <div className="min-h-screen w-full p-6">
-          <button
-            onClick={() => setPage('hero')}
-            className="mb-6 px-4 py-2 rounded bg-neutral-800 text-neutral-100"
+        <div className="font-primary relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-[#1a1d18] via-black to-[#2a2e26] text-[#e6e1d7]">
+           {/* Background SVG grid and animated lines/dots */}
+          <svg
+            className="absolute inset-0 h-full w-full"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            ← Back
-          </button>
+            <defs>
+              <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+                <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(200,180,160,0.08)" strokeWidth="0.5" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+            <line x1="0" y1="20%" x2="100%" y2="20%" className="grid-line" style={{ animationDelay: '0.5s' }} />
+            <line x1="0" y1="80%" x2="100%" y2="80%" className="grid-line" style={{ animationDelay: '1s' }} />
+            <line x1="20%" y1="0" x2="20%" y2="100%" className="grid-line" style={{ animationDelay: '1.5s' }} />
+            <line x1="80%" y1="0" x2="80%" y2="100%" className="grid-line" style={{ animationDelay: '2s' }} />
+            <line x1="50%" y1="0" x2="50%" y2="100%" className="grid-line" style={{ animationDelay: '2.5s', opacity: 0.05 }} />
+            <line x1="0" y1="50%" x2="100%" y2="50%" className="grid-line" style={{ animationDelay: '3s', opacity: 0.05 }} />
+            <circle cx="20%" cy="20%" r="2" className="detail-dot" style={{ animationDelay: '3s' }} />
+            <circle cx="80%" cy="20%" r="2" className="detail-dot" style={{ animationDelay: '3.2s' }} />
+            <circle cx="20%" cy="80%" r="2" className="detail-dot" style={{ animationDelay: '3.4s' }} />
+            <circle cx="80%" cy="80%" r="2" className="detail-dot" style={{ animationDelay: '3.6s' }} />
+            <circle cx="50%" cy="50%" r="1.5" className="detail-dot" style={{ animationDelay: '4s' }} />
+          </svg>
 
-          <div className="w-full">
-            <PageDecider renderPage={page} />
+          {/* Corner elements */}
+          <div className="corner-element top-8 left-8" style={{ animationDelay: '4s' }}>
+            <div className="absolute top-0 left-0 h-2 w-2 opacity-30" style={{ background: colors[200] }} />
+          </div>
+          <div className="corner-element top-8 right-8" style={{ animationDelay: '4.2s' }}>
+            <div className="absolute top-0 right-0 h-2 w-2 opacity-30" style={{ background: colors[200] }} />
+          </div>
+          <div className="corner-element bottom-8 left-8" style={{ animationDelay: '4.4s' }}>
+            <div className="absolute bottom-0 left-0 h-2 w-2 opacity-30" style={{ background: colors[200] }} />
+          </div>
+          <div className="corner-element right-8 bottom-8" style={{ animationDelay: '4.6s' }}>
+            <div className="absolute right-0 bottom-0 h-2 w-2 opacity-30" style={{ background: colors[200] }} />
+          </div>
+
+          {/* Floating elements */}
+          <div className="floating-element" style={{ top: '25%', left: '15%', animationDelay: '5s' }} />
+          <div className="floating-element" style={{ top: '60%', left: '85%', animationDelay: '5.5s' }} />
+          <div className="floating-element" style={{ top: '40%', left: '10%', animationDelay: '6s' }} />
+          <div className="floating-element" style={{ top: '75%', left: '90%', animationDelay: '6.5s' }} />
+
+          <Logo />
+
+          <div className='relative h-full w-full min-h-screen px-4 z-10'>
+            {/* Hero Text */}
+            <div className='relative flex flex-col items-center justify-between w-full h-screen'>
+                <div className='None h-[110px]'></div>
+                
+                <PageDecider renderPage={page} />
+
+            </div>
           </div>
         </div>
       )}

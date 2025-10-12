@@ -10,7 +10,7 @@ export default function Disec() {
                 <ExpandableCard
                     title="DISEC"
                     description="Disarmament and International Security Committee"
-                    src="https://assets.aceternity.com/demos/lana-del-rey.jpeg"
+                    src="/his-global-conclave-edition-2/images/un_emblem.png"
                     ctaText="Visit"
                     ctaLink="https://example.com"
                     content={() => (
@@ -29,7 +29,7 @@ export default function Disec() {
                     <ExpandableCard
                         title="Person 1"
                         description="Disarmament and International Security Committee"
-                        src="https://assets.aceternity.com/demos/lana-del-rey.jpeg"
+                        src="/his-global-conclave-edition-2/images/un_emblem.png"
                         ctaText="Visit"
                         ctaLink="https://example.com"
                         content={() => (
@@ -41,7 +41,7 @@ export default function Disec() {
                     <ExpandableCard
                         title="DISEC"
                         description="Disarmament and International Security Committee"
-                        src="https://assets.aceternity.com/demos/lana-del-rey.jpeg"
+                        src="/his-global-conclave-edition-2/images/un_emblem.png"
                         ctaText="Visit"
                         ctaLink="https://example.com"
                         content={() => (
@@ -53,7 +53,7 @@ export default function Disec() {
                     <ExpandableCard
                         title="DISEC"
                         description="Disarmament and International Security Committee"
-                        src="https://assets.aceternity.com/demos/lana-del-rey.jpeg"
+                        src="/his-global-conclave-edition-2/images/un_emblem.png"
                         ctaText="Visit"
                         ctaLink="https://example.com"
                         content={() => (
