@@ -189,6 +189,20 @@ img {
     transform: translateY(-2px);
 }
 
+.left-side-committee-icons {
+    top: 50%;
+    left: -40%;
+}
+
+.center-side-committee-icons {
+    top: -50%;
+}
+
+.right-side-committee-icons {
+    top: 50%;
+    right: -40%;
+}
+
 @keyframes underline-grow {
   to {
     width: 100%;
