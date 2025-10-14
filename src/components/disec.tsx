@@ -7,7 +7,7 @@ export default function Disec() {
     return (
         <div className="relative h-full w-full flex flex-col md:flex-row md:justify-between items-center md:items-start p-10 z-10">
 
-            <div className="relative md:min-h-[650px] w-full max-w-[200px] items-center flex flex-col justify-between mx-10 mt-20 mb-8 md:mb-0">
+            <div className="relative md:min-h-[650px] w-full max-w-[275px] items-center flex flex-col justify-between mx-10 mt-20 mb-8 md:mb-0">
                 <ExpandableCard
                     title="DISEC"
                     description="Disarmament and International Security Committee"

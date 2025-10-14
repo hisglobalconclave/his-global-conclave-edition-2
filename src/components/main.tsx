@@ -176,6 +176,12 @@ export default function MinimalHero() {
         /* Hero Page */
         <>
             {/* Background SVG grid and animated lines/dots */}
+          <div id='uneso-connector' className='connectors'></div>
+          {/* <div id='unhcr-connector' className='connectors'></div>
+          <div id='unoosa-connector' className='connectors'></div>
+          <div id='cgsd-connector' className='connectors'></div>
+          <div id='unodc-connector' className='connectors'></div>
+          <div id='unsc-connector' className='connectors'></div> */}
           <svg
             className="absolute inset-0 h-full w-full"
             xmlns="http://www.w3.org/2000/svg"
@@ -279,22 +285,37 @@ export default function MinimalHero() {
 
                     {/* Left Side Committee Icons */}
                     <div className='absolute left-side-committee-icons md:flex md:flex-col hidden'>
-                        
-                        {/* Animated SVG line */}
-                        {/* <svg
-                            width="500px"
-                            height="60"
-                            className="absolute left-0 top-0"
-                            style={{ pointerEvents: 'none', zIndex: 1 }}
+                        <button
+                            onClick={() => setPage('uneso')}
+                            className="committee-icon-animation relative flex items-center group"
+                            data-delay="3900"
+                            ref={el => {
+                                if (el) {
+                                    // Only run in browser
+                                    setTimeout(() => {
+                                        const rect = el.getBoundingClientRect();
+                                        const container = document.getElementById('uneso-connector');
+                                        if (container) {
+                                            container.innerHTML = `
+                                                <svg
+                                                    style="position:absolute;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:40"
+                                                    width="100vw" height="100vh"
+                                                >
+
+                                                    <defs>
+                                                        <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
+                                                            <stop offset="0%" stop-color="rgba(200, 180, 160, 0)" />
+                                                            <stop offset="100%" stop-color="rgba(200, 180, 160, 1)" />
+                                                        </linearGradient>
+                                                    </defs>
+                                                    <polyline class="committee-line" points="${rect.left + 10.5},${rect.top + 10.5} ${rect.left - rect.width / 2},${rect.top - rect.height / 2} 0,${rect.top - rect.height / 2}" stroke="url(#grad1)" fill="none" />
+                                                </svg>
+                                            `;
+                                        }
+                                    }, 5000); // Wait for animation
+                                }
+                            }}
                         >
-                            <polyline
-                                points="50,30 20,0 0,0"
-                                stroke="#ffffff"
-                                strokeWidth="4"
-                                fill="none"
-                            />
-                        </svg>    */} 
-                        <button onClick={() => setPage('uneso')} className="committee-icon-animation relative flex items-center group" data-delay="3900">
                             {/* Committee icon */}
                             <Image
                                 width={64} height={64}
@@ -306,7 +327,36 @@ export default function MinimalHero() {
                             />
                             <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNESO</span>
                         </button>
-                        <button onClick={() => setPage('unhcr')} className="committee-icon-animation relative flex items-center group mt-30" data-delay="3700">
+                        <button onClick={() => setPage('unhcr')}
+                            className="committee-icon-animation relative flex items-center group mt-30"
+                            data-delay="3700"
+                            ref={el => {
+                                if (el) {
+                                    // Only run in browser
+                                    setTimeout(() => {
+                                        const rect = el.getBoundingClientRect();
+                                        const container = document.getElementById('unhcr-connector');
+                                        if (container) {
+                                            container.innerHTML = `
+                                                <svg
+                                                    style="position:absolute;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:40"
+                                                    width="100vw" height="100vh"
+                                                >
+
+                                                    <defs>
+                                                        <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
+                                                            <stop offset="0%" stop-color="rgba(200, 180, 160, 0)" />
+                                                            <stop offset="100%" stop-color="rgba(200, 180, 160, 1)" />
+                                                        </linearGradient>
+                                                    </defs>
+                                                    <polyline class="committee-line" points="${rect.left + 10.5},${rect.top + rect.height - 10.5} ${rect.left - rect.width / 2},${rect.top + rect.height - rect.height / 2} 0,${rect.top + rect.height - rect.height / 2}" stroke="url(#grad1)" fill="none" />
+                                                </svg>
+                                            `;
+                                        }
+                                    }, 5000); // Wait for animation
+                                }
+                            }}
+                        >
                             {/* Committee icon */}
                             <Image
                                 width={64} height={64}
@@ -322,7 +372,36 @@ export default function MinimalHero() {
                     {/* Center Side Committee Icons */}
                     <div className='absolute center-side-committee-icons md:flex w-full flex-row items-center justify-between hidden'>
 
-                        <button onClick={() => setPage('unoosa')} className="committee-icon-animation relative flex items-center group translate -translate-x-10" data-delay="4100">
+                        <button onClick={() => setPage('unoosa')}
+                            className="committee-icon-animation relative flex items-center group translate -translate-x-10"
+                            data-delay="4100"
+                            ref={el => {
+                                if (el) {
+                                    // Only run in browser
+                                    setTimeout(() => {
+                                        const rect = el.getBoundingClientRect();
+                                        const container = document.getElementById('unoosa-connector');
+                                        if (container) {
+                                            container.innerHTML = `
+                                                <svg
+                                                    style="position:absolute;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:40"
+                                                    width="100vw" height="100vh"
+                                                >
+
+                                                    <defs>
+                                                        <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
+                                                            <stop offset="0%" stop-color="rgba(200, 180, 160, 0)" />
+                                                            <stop offset="100%" stop-color="rgba(200, 180, 160, 1)" />
+                                                        </linearGradient>
+                                                    </defs>
+                                                    <polyline class="committee-line" points="${rect.left + 10.5},${rect.top + 10.5} ${rect.left - rect.width / 2},${rect.top - rect.height / 2} ${rect.left - rect.width / 2},0" stroke="url(#grad1)" fill="none" />
+                                                </svg>
+                                            `;
+                                        }
+                                    }, 5000); // Wait for animation
+                                }
+                            }}
+                            >
                             {/* Committee icon */}
                             <Image
                                 width={64} height={64}
@@ -346,7 +425,36 @@ export default function MinimalHero() {
                             <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>DISEC</span>
                         </button>
 
-                        <button onClick={() => setPage('cgsd')} className="committee-icon-animation relative flex items-center group translate translate-x-10" data-delay="4500">
+                        <button onClick={() => setPage('cgsd')}
+                            className="committee-icon-animation relative flex items-center group translate translate-x-10"
+                            data-delay="4500"
+                            ref={el => {
+                                if (el) {
+                                    // Only run in browser
+                                    setTimeout(() => {
+                                        const rect = el.getBoundingClientRect();
+                                        const container = document.getElementById('cgsd-connector');
+                                        if (container) {
+                                            container.innerHTML = `
+                                                <svg
+                                                    style="position:absolute;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:40"
+                                                    width="100vw" height="100vh"
+                                                >
+
+                                                    <defs>
+                                                        <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
+                                                            <stop offset="0%" stop-color="rgba(200, 180, 160, 0)" />
+                                                            <stop offset="100%" stop-color="rgba(200, 180, 160, 1)" />
+                                                        </linearGradient>
+                                                    </defs>
+                                                    <polyline class="committee-line" points="${rect.left + 10.5},${rect.top + 10.5} ${rect.left - rect.width / 2},${rect.top - rect.height / 2} 0,${rect.top - rect.height / 2}" stroke="url(#grad1)" fill="none" />
+                                                </svg>
+                                            `;
+                                        }
+                                    }, 5000); // Wait for animation
+                                }
+                            }}
+                        >
                             {/* Committee icon */}
                             <Image
                                 width={64} height={64}
@@ -361,7 +469,36 @@ export default function MinimalHero() {
 
                     {/* Right Side Committee Icons */}
                     <div className="absolute right-side-committee-icons md:flex md:flex-col hidden">
-                        <button onClick={() => setPage('unodc')} className="committee-icon-animation relative flex items-center group" data-delay="4700">
+                        <button onClick={() => setPage('unodc')}
+                            className="committee-icon-animation relative flex items-center group"
+                            data-delay="4700"
+                            ref={el => {
+                                if (el) {
+                                    // Only run in browser
+                                    setTimeout(() => {
+                                        const rect = el.getBoundingClientRect();
+                                        const container = document.getElementById('unodc-connector');
+                                        if (container) {
+                                            container.innerHTML = `
+                                                <svg
+                                                    style="position:absolute;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:40"
+                                                    width="100vw" height="100vh"
+                                                >
+
+                                                    <defs>
+                                                        <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
+                                                            <stop offset="0%" stop-color="rgba(200, 180, 160, 0)" />
+                                                            <stop offset="100%" stop-color="rgba(200, 180, 160, 1)" />
+                                                        </linearGradient>
+                                                    </defs>
+                                                    <polyline class="committee-line" points="${rect.left + 10.5},${rect.top + 10.5} ${rect.left - rect.width / 2},${rect.top - rect.height / 2} 0,${rect.top - rect.height / 2}" stroke="url(#grad1)" fill="none" />
+                                                </svg>
+                                            `;
+                                        }
+                                    }, 5000); // Wait for animation
+                                }
+                            }}
+                        >
                             {/* Committee icon */}
                             <Image
                                 width={64} height={64}
@@ -372,7 +509,36 @@ export default function MinimalHero() {
                             />
                             <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNODC</span>
                         </button>
-                        <button onClick={() => setPage('unsc')} className="committee-icon-animation relative flex items-center group mt-30" data-delay="4900">
+                        <button onClick={() => setPage('unsc')}
+                            className="committee-icon-animation relative flex items-center group mt-30"
+                            data-delay="4900"
+                            ref={el => {
+                                if (el) {
+                                    // Only run in browser
+                                    setTimeout(() => {
+                                        const rect = el.getBoundingClientRect();
+                                        const container = document.getElementById('unsc-connector');
+                                        if (container) {
+                                            container.innerHTML = `
+                                                <svg
+                                                    style="position:absolute;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:40"
+                                                    width="100vw" height="100vh"
+                                                >
+
+                                                    <defs>
+                                                        <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
+                                                            <stop offset="0%" stop-color="rgba(200, 180, 160, 0)" />
+                                                            <stop offset="100%" stop-color="rgba(200, 180, 160, 1)" />
+                                                        </linearGradient>
+                                                    </defs>
+                                                    <polyline class="committee-line" points="${rect.left + 10.5},${rect.top + 10.5} ${rect.left - rect.width / 2},${rect.top - rect.height / 2} 0,${rect.top - rect.height / 2}" stroke="url(#grad1)" fill="none" />
+                                                </svg>
+                                            `;
+                                        }
+                                    }, 5000); // Wait for animation
+                                }
+                            }}
+                        >
                             {/* Committee icon */}
                             <Image
                                 width={64} height={64}
@@ -396,25 +562,25 @@ export default function MinimalHero() {
                         className="font-mono text-xs font-light tracking-[0.2em] uppercase opacity-80 md:text-sm"
                         style={{ color: colors[200] }}
                     >
-                        <span className="word" data-delay="2650">
+                        <span className="word word-space" data-delay="2650">
                         Fostering
                         </span>
-                        <span className="word" data-delay="2800">
+                        <span className="word word-space" data-delay="2800">
                         Global
                         </span>
-                        <span className="word" data-delay="2950">
+                        <span className="word word-space" data-delay="2950">
                         Dialogue
                         </span>
-                        <span className="word" data-delay="3200">
+                        <span className="word word-space" data-delay="3200">
                         for
                         </span>
-                        <span className="word" data-delay="3350">
+                        <span className="word word-space" data-delay="3350">
                         a
                         </span>
-                        <span className="word" data-delay="3500">
+                        <span className="word word-space" data-delay="3500">
                         Better
                         </span>
-                        <span className="word" data-delay="3650">
+                        <span className="word word-space" data-delay="3650">
                         Future
                         </span>
                     </h2>
@@ -451,21 +617,6 @@ export default function MinimalHero() {
           <div className='flex flex-col justify-between min-h-screen md:hidden'>
             {/* Left Side Committee Icons */}
             <div className='flex justify-between m-10 items-center'>
-                
-                {/* Animated SVG line */}
-                {/* <svg
-                    width="500px"
-                    height="60"
-                    className="absolute left-0 top-0"
-                    style={{ pointerEvents: 'none', zIndex: 1 }}
-                >
-                    <polyline
-                        points="50,30 20,0 0,0"
-                        stroke="#ffffff"
-                        strokeWidth="4"
-                        fill="none"
-                    />
-                </svg>    */} 
                 <button onClick={() => setPage('uneso')} className="committee-icon-animation relative flex items-center group" data-delay="4100">
                     {/* Committee icon */}
                     <Image
