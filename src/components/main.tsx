@@ -5,7 +5,7 @@ import PageDecider from '@/components/page-decider';
 import Logo from '@/components/logo';
 import { HoverBorderGradient } from '@/components/ui/hover-border-gradient';
 import Image from 'next/image';
-import { Mouse } from 'lucide-react';
+import { Mouse, ArrowLeft } from 'lucide-react';
 
 
 const colors = {
@@ -595,9 +595,6 @@ export default function MinimalHero() {
           </svg>
 
           {/* Corner elements */}
-          <div className="corner-element top-8 left-8" style={{ animationDelay: '4s' }}>
-            <div className="absolute top-0 left-0 h-2 w-2 opacity-30" style={{ background: colors[200] }} />
-          </div>
           <div className="corner-element top-8 right-8" style={{ animationDelay: '4.2s' }}>
             <div className="absolute top-0 right-0 h-2 w-2 opacity-30" style={{ background: colors[200] }} />
           </div>
@@ -616,20 +613,15 @@ export default function MinimalHero() {
 
           <Logo />
 
-          <div className='relative h-full w-full min-h-screen px-4 z-10'>
-            {/* Hero Text */}
-            <div className='relative flex flex-col items-center justify-between w-full h-screen'>
-                <div className='None h-[110px]'></div>
-                <button
-                
-                    onClick={() => setPage('hero')}
-                >
-                    Go back
-                </button>
-                <PageDecider renderPage={page} />
+          <button
+            className="mono-label absolute top-8 left-8 border border-[#e6e1d7] px-2 py-2 rounded hover:bg-[#e6e1d7] hover:text-black transition-colors z-50"
+              onClick={() => setPage('hero')}
+          >
+              <ArrowLeft className="inline-block" /> Go Back
+          </button>
 
-            </div>
-          </div>
+          <PageDecider renderPage={page} />
+        
         </div>
       )}
     </div>
