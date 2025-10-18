@@ -24,18 +24,13 @@ const colors = {
 export default function MinimalHero() {
   const [page, setPage] = useState<'hero' | 'uneso' | 'unhcr' | 'unodc' | 'unsc' | 'unoosa' | 'disec' | 'cgsd'>("hero");
   const gradientRef = useRef<HTMLDivElement>(null);
-  const introPlayedRef = useRef(false);
-  const hoverHandlersAttachedRef = useRef(false);
   useEffect(() => {
     // Only run the hero-specific DOM effects when the hero is visible
     if (page !== 'hero') return;
-    // Select elements used by the intro animations and for hover behaviour
     const animatedElements = document.querySelectorAll<HTMLElement>(
       '.word, .committee-icon-animation, .custom-button, .highlighted-text'
     );
 
-  // Only run the intro animation sequence once per page load
-  if (!introPlayedRef.current) {
       animatedElements.forEach((element) => {
         const delay = parseInt(element.getAttribute('data-delay') || '0', 10);
         setTimeout(() => {
@@ -50,55 +45,6 @@ export default function MinimalHero() {
           element.style.animation = 'var(--animate-bounce)';
         }, delay);
       });
-
-      // Mark that the intro has been played for this page load
-      introPlayedRef.current = true;
-
-      // figure out the longest delay from data-delay attributes so we can
-      // add the `.intro-done` CSS class after the animations complete
-      try {
-        const delays: number[] = [];
-        animatedElements.forEach((el) => {
-          const d = parseInt(el.getAttribute('data-delay') || '0', 10);
-          delays.push(isNaN(d) ? 0 : d);
-        });
-        document.querySelectorAll<HTMLElement>('.icons').forEach((el) => {
-          const d = parseInt(el.getAttribute('data-delay') || '0', 10);
-          delays.push(isNaN(d) ? 0 : d);
-        });
-
-        const maxDelay = delays.length ? Math.max(...delays) : 0;
-        // Allow animation duration (0.8s) + small buffer (200ms)
-        const bufferMs = 1200;
-        const timeout = maxDelay + bufferMs;
-        const timer = window.setTimeout(() => {
-          document.documentElement.classList.add('intro-done');
-        }, timeout);
-
-        // cleanup: if the effect runs again, clear the timeout
-        return () => {
-          clearTimeout(timer);
-          document.documentElement.classList.remove('intro-done');
-        };
-      } catch (err) {
-        // ensure we still set the intro-done flag even on error
-        document.documentElement.classList.add('intro-done');
-      }
-    } else {
-      // If the intro already ran earlier in this session, make sure
-      // newly-mounted elements appear in their final, non-animated state
-      animatedElements.forEach((element) => {
-        // cancel any animation and show final state
-        element.style.animation = 'none';
-        element.style.opacity = '1';
-        element.style.transform = 'none';
-      });
-
-      document.querySelectorAll<HTMLElement>('.icons').forEach((element) => {
-        element.style.opacity = '1';
-        element.style.animation = 'none';
-      });
-    }
 
     // Mouse gradient
     const gradient = gradientRef.current;
@@ -115,8 +61,7 @@ export default function MinimalHero() {
     document.addEventListener('mousemove', onMouseMove);
     document.addEventListener('mouseleave', onMouseLeave);
 
-    // Word hover effects - attach handlers only once to avoid duplicating listeners
-    if (!hoverHandlersAttachedRef.current) {
+    // Hover glow effect
       animatedElements.forEach((element) => {
         element.addEventListener('mouseenter', () => {
           element.style.textShadow = '0 0 20px rgba(200, 180, 160, 0.5)';
@@ -125,9 +70,7 @@ export default function MinimalHero() {
           element.style.textShadow = 'none';
         });
       });
-      hoverHandlersAttachedRef.current = true;
-    }
-
+      
     // Click ripple effect
     function onClick(e: MouseEvent) {
       const ripple = document.createElement('div');
