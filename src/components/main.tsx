@@ -122,12 +122,12 @@ export default function MinimalHero() {
         /* Hero Page */
         <>
           {/* Background SVG grid and animated lines/dots */}
-          <div id='uneso-connector' className='connectors'></div>
-          {/* <div id='unhcr-connector' className='connectors'></div>
+          <div id='unesco-connector' className='connectors'></div>
+          <div id='unhcr-connector' className='connectors'></div>
           <div id='unoosa-connector' className='connectors'></div>
-          <div id='cgsd-connector' className='connectors'></div>
+          <div id='ecosoc-connector' className='connectors'></div>
           <div id='unodc-connector' className='connectors'></div>
-          <div id='unsc-connector' className='connectors'></div> */}
+          <div id='unsc-connector' className='connectors'></div>
           <svg
             className="absolute inset-0 h-full w-full"
             xmlns="http://www.w3.org/2000/svg"
@@ -241,7 +241,7 @@ export default function MinimalHero() {
                                     // Only run in browser
                                     setTimeout(() => {
                                         const rect = el.getBoundingClientRect();
-                                        const container = document.getElementById('uneso-connector');
+                                        const container = document.getElementById('unesco-connector');
                                         if (container) {
                                             container.innerHTML = `
                                                 <svg
@@ -250,16 +250,16 @@ export default function MinimalHero() {
                                                 >
 
                                                     <defs>
-                                                        <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
+                                                        <linearGradient id="grad2" x1="0%" x2="100%" y1="0%" y2="0%">
                                                             <stop offset="0%" stop-color="rgba(200, 180, 160, 0)" />
                                                             <stop offset="100%" stop-color="rgba(200, 180, 160, 1)" />
                                                         </linearGradient>
                                                     </defs>
-                                                    <polyline class="committee-line" points="${rect.left + 10.5},${rect.top + 10.5} ${rect.left - rect.width / 2},${rect.top - rect.height / 2} 0,${rect.top - rect.height / 2}" stroke="url(#grad1)" fill="none" />
+                                                    <polyline class="committee-line" points="${rect.left + 10.5},${rect.top + 10.5} ${rect.left - rect.width / 2},${rect.top - rect.height / 2} 0,${rect.top - rect.height / 2}" stroke="url(#grad2)" fill="none" />
                                                 </svg>
                                             `;
                                         }
-                                    }, 5000); // Wait for animation
+                                    }, 6000); // Wait for animation
                                 }
                             }}
                         >
@@ -274,6 +274,8 @@ export default function MinimalHero() {
                             />
                             <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNESCO</span>
                         </button>
+
+                        {/* UNHCR */}
                         <button onClick={() => setPage('unhcr')}
                             className="committee-icon-animation relative flex items-center group mt-30"
                             data-delay="3700"
@@ -296,11 +298,11 @@ export default function MinimalHero() {
                                                             <stop offset="100%" stop-color="rgba(200, 180, 160, 1)" />
                                                         </linearGradient>
                                                     </defs>
-                                                    <polyline class="committee-line" points="${rect.left + 10.5},${rect.top + rect.height - 10.5} ${rect.left - rect.width / 2},${rect.top + rect.height - rect.height / 2} 0,${rect.top + rect.height - rect.height / 2}" stroke="url(#grad1)" fill="none" />
+                                                    <polyline class="committee-line" points="${rect.left + 10.5},${rect.top + rect.height - 10.5} ${rect.left - rect.width / 2},${rect.top + rect.height + rect.height / 2} 0,${rect.top + rect.height + rect.height / 2}" stroke="url(#grad1)" fill="none" />
                                                 </svg>
                                             `;
                                         }
-                                    }, 5000); // Wait for animation
+                                    }, 6000); // Wait for animation
                                 }
                             }}
                         >
@@ -336,16 +338,16 @@ export default function MinimalHero() {
                                                 >
 
                                                     <defs>
-                                                        <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
+                                                        <linearGradient id="grad3" x1="0%" x2="0%" y1="0%" y2="100%">
                                                             <stop offset="0%" stop-color="rgba(200, 180, 160, 0)" />
                                                             <stop offset="100%" stop-color="rgba(200, 180, 160, 1)" />
                                                         </linearGradient>
                                                     </defs>
-                                                    <polyline class="committee-line" points="${rect.left + 10.5},${rect.top + 10.5} ${rect.left - rect.width / 2},${rect.top - rect.height / 2} ${rect.left - rect.width / 2},0" stroke="url(#grad1)" fill="none" />
+                                                    <polyline class="committee-line" points="${rect.left + 10.5},${rect.top + 10.5} ${rect.left - rect.width / 2},${rect.top - rect.height / 2} ${rect.left - rect.width / 2},0" stroke="url(#grad3)" fill="none" />
                                                 </svg>
                                             `;
                                         }
-                                    }, 5000); // Wait for animation
+                                    }, 6000); // Wait for animation
                                 }
                             }}
                             >
@@ -380,7 +382,7 @@ export default function MinimalHero() {
                                     // Only run in browser
                                     setTimeout(() => {
                                         const rect = el.getBoundingClientRect();
-                                        const container = document.getElementById('cgsd-connector');
+                                        const container = document.getElementById('ecosoc-connector');
                                         if (container) {
                                             container.innerHTML = `
                                                 <svg
@@ -389,16 +391,16 @@ export default function MinimalHero() {
                                                 >
 
                                                     <defs>
-                                                        <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
+                                                        <linearGradient id="grad4" x1="0%" x2="0%" y1="0%" y2="100%">
                                                             <stop offset="0%" stop-color="rgba(200, 180, 160, 0)" />
                                                             <stop offset="100%" stop-color="rgba(200, 180, 160, 1)" />
                                                         </linearGradient>
                                                     </defs>
-                                                    <polyline class="committee-line" points="${rect.left + 10.5},${rect.top + 10.5} ${rect.left - rect.width / 2},${rect.top - rect.height / 2} 0,${rect.top - rect.height / 2}" stroke="url(#grad1)" fill="none" />
+                                                    <polyline class="committee-line" points="${rect.left + rect.width - 10.5},${rect.top + 10.5} ${rect.left + rect.width + rect.width / 2},${rect.top - rect.height / 2} ${rect.left + rect.width + rect.width / 2},0" stroke="url(#grad4)" fill="none" />
                                                 </svg>
                                             `;
                                         }
-                                    }, 5000); // Wait for animation
+                                    }, 6000); // Wait for animation
                                 }
                             }}
                         >
@@ -433,16 +435,16 @@ export default function MinimalHero() {
                                                 >
 
                                                     <defs>
-                                                        <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
-                                                            <stop offset="0%" stop-color="rgba(200, 180, 160, 0)" />
-                                                            <stop offset="100%" stop-color="rgba(200, 180, 160, 1)" />
+                                                        <linearGradient id="grad5" x1="0%" x2="100%" y1="0%" y2="0%">
+                                                            <stop offset="0%" stop-color="rgba(200, 180, 160, 1)" />
+                                                            <stop offset="100%" stop-color="rgba(200, 180, 160, 0)" />
                                                         </linearGradient>
                                                     </defs>
-                                                    <polyline class="committee-line" points="${rect.left + 10.5},${rect.top + 10.5} ${rect.left - rect.width / 2},${rect.top - rect.height / 2} 0,${rect.top - rect.height / 2}" stroke="url(#grad1)" fill="none" />
+                                                    <polyline class="committee-line" points="${rect.left + rect.width - 10.5},${rect.top + 10.5} ${rect.left + rect.width + rect.width / 2},${rect.top - rect.height / 2} ${window.innerWidth},${rect.top - rect.height / 2}" stroke="url(#grad5)" fill="none" />
                                                 </svg>
                                             `;
                                         }
-                                    }, 5000); // Wait for animation
+                                    }, 6000); // Wait for animation
                                 }
                             }}
                         >
@@ -473,16 +475,16 @@ export default function MinimalHero() {
                                                 >
 
                                                     <defs>
-                                                        <linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
-                                                            <stop offset="0%" stop-color="rgba(200, 180, 160, 0)" />
-                                                            <stop offset="100%" stop-color="rgba(200, 180, 160, 1)" />
+                                                        <linearGradient id="grad6" x1="0%" x2="100%" y1="0%" y2="0%">
+                                                            <stop offset="0%" stop-color="rgba(200, 180, 160, 1)" />
+                                                            <stop offset="100%" stop-color="rgba(200, 180, 160, 0)" />
                                                         </linearGradient>
                                                     </defs>
-                                                    <polyline class="committee-line" points="${rect.left + 10.5},${rect.top + 10.5} ${rect.left - rect.width / 2},${rect.top - rect.height / 2} 0,${rect.top - rect.height / 2}" stroke="url(#grad1)" fill="none" />
+                                                    <polyline class="committee-line" points="${rect.left + rect.width - 10.5},${rect.top + rect.height - 10.5} ${rect.left + rect.width + rect.width / 2},${rect.top + rect.height + rect.height / 2} ${window.innerWidth},${rect.top + rect.height + rect.height / 2}" stroke="url(#grad6)" fill="none" />
                                                 </svg>
                                             `;
                                         }
-                                    }, 5000); // Wait for animation
+                                    }, 6000); // Wait for animation
                                 }
                             }}
                         >
