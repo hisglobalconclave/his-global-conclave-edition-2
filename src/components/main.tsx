@@ -18,7 +18,7 @@ const colors = {
   600: '#544237',
   700: '#3c4237',
   800: '#2a2e26',
-  900: '#1a1d18',
+  900: '#1a1d18', 
 };
 
 export default function MinimalHero() {
@@ -175,7 +175,7 @@ export default function MinimalHero() {
       {page === 'hero' ? (
         /* Hero Page */
         <>
-            {/* Background SVG grid and animated lines/dots */}
+          {/* Background SVG grid and animated lines/dots */}
           <div id='uneso-connector' className='connectors'></div>
           {/* <div id='unhcr-connector' className='connectors'></div>
           <div id='unoosa-connector' className='connectors'></div>
@@ -318,10 +318,10 @@ export default function MinimalHero() {
                         >
                             {/* Committee icon */}
                             <Image
-                                width={64} height={64}
+                                width={72} height={72}
                                 className="committee-icon"
                                 src="/his-global-conclave-edition-2/images/un_emblem.png"
-                                alt=""
+                                alt="unesco-icon"
                                 style={{ zIndex: 2 }}
                                 
                             />
@@ -359,10 +359,10 @@ export default function MinimalHero() {
                         >
                             {/* Committee icon */}
                             <Image
-                                width={64} height={64}
+                                width={72} height={72}
                                 className="committee-icon"
                                 src="/his-global-conclave-edition-2/images/un_emblem.png"
-                                alt=""
+                                alt="unhcr-icon"
                                 style={{ zIndex: 2 }}
                             />
                             <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNHCR</span>
@@ -404,10 +404,10 @@ export default function MinimalHero() {
                             >
                             {/* Committee icon */}
                             <Image
-                                width={64} height={64}
+                                width={72} height={72}
                                 className="committee-icon"
                                 src="/his-global-conclave-edition-2/images/un_emblem.png"
-                                alt=""
+                                alt="unoosa-icon"
                                 style={{ zIndex: 2 }}
                             />
                             <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNOOSA</span>
@@ -416,10 +416,10 @@ export default function MinimalHero() {
                         <button onClick={() => setPage('disec')} className="committee-icon-animation relative flex items-center group mb-20" data-delay="4300">
                             {/* Committee icon */}
                             <Image
-                                width={64} height={64}
+                                width={72} height={72}
                                 className="committee-icon"
                                 src="/his-global-conclave-edition-2/images/un_emblem.png"
-                                alt=""
+                                alt="disec-icon"
                                 style={{ zIndex: 2 }}
                             />
                             <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>DISEC</span>
@@ -457,10 +457,10 @@ export default function MinimalHero() {
                         >
                             {/* Committee icon */}
                             <Image
-                                width={64} height={64}
+                                width={72} height={72}
                                 className="committee-icon"
                                 src="/his-global-conclave-edition-2/images/un_emblem.png"
-                                alt=""
+                                alt="cgsd-icon"
                                 style={{ zIndex: 2 }}
                             />
                             <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>CGSD</span>
@@ -501,10 +501,10 @@ export default function MinimalHero() {
                         >
                             {/* Committee icon */}
                             <Image
-                                width={64} height={64}
+                                width={72} height={72}
                                 className="committee-icon"
                                 src="/his-global-conclave-edition-2/images/un_emblem.png"
-                                alt=""
+                                alt="unodc-icon"
                                 style={{ zIndex: 2 }}
                             />
                             <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNODC</span>
@@ -541,10 +541,10 @@ export default function MinimalHero() {
                         >
                             {/* Committee icon */}
                             <Image
-                                width={64} height={64}
+                                width={72} height={72}
                                 className="committee-icon"
                                 src="/his-global-conclave-edition-2/images/un_emblem.png"
-                                alt=""
+                                alt="unsc-icon"
                                 style={{ zIndex: 2 }}
                             />
                             <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNSC</span>
