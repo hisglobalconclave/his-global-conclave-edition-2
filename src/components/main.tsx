@@ -22,7 +22,7 @@ const colors = {
 };
 
 export default function MinimalHero() {
-  const [page, setPage] = useState<'hero' | 'uneso' | 'unhcr' | 'unodc' | 'unsc' | 'unoosa' | 'disec' | 'cgsd'>("hero");
+  const [page, setPage] = useState<'hero' | 'unesco' | 'unhcr' | 'unodc' | 'unsc' | 'unoosa' | 'disec' | 'ecosoc'>("hero");
   const gradientRef = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
@@ -231,8 +231,9 @@ export default function MinimalHero() {
 
                     {/* Left Side Committee Icons */}
                     <div className='absolute left-side-committee-icons md:flex md:flex-col hidden'>
+                        {/* UNESCO */}
                         <button
-                            onClick={() => setPage('uneso')}
+                            onClick={() => setPage('unesco')}
                             className="committee-icon-animation relative flex items-center group"
                             data-delay="3900"
                             ref={el => {
@@ -271,7 +272,7 @@ export default function MinimalHero() {
                                 style={{ zIndex: 2 }}
                                 
                             />
-                            <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNESO</span>
+                            <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNESCO</span>
                         </button>
                         <button onClick={() => setPage('unhcr')}
                             className="committee-icon-animation relative flex items-center group mt-30"
@@ -371,7 +372,7 @@ export default function MinimalHero() {
                             <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>DISEC</span>
                         </button>
 
-                        <button onClick={() => setPage('cgsd')}
+                        <button onClick={() => setPage('ecosoc')}
                             className="committee-icon-animation relative flex items-center group translate translate-x-10"
                             data-delay="4500"
                             ref={el => {
@@ -409,7 +410,7 @@ export default function MinimalHero() {
                                 alt="cgsd-icon"
                                 style={{ zIndex: 2 }}
                             />
-                            <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>CGSD</span>
+                            <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>ECOSOC</span>
                         </button>
                     </div>
 
@@ -563,7 +564,7 @@ export default function MinimalHero() {
           <div className='flex flex-col justify-between min-h-screen md:hidden'>
             {/* Left Side Committee Icons */}
             <div className='flex justify-between m-10 items-center'>
-                <button onClick={() => setPage('uneso')} className="committee-icon-animation relative flex items-center group" data-delay="4100">
+                <button onClick={() => setPage('unesco')} className="committee-icon-animation relative flex items-center group" data-delay="4100">
                     {/* Committee icon */}
                     <Image
                         width={64} height={64}
@@ -573,7 +574,7 @@ export default function MinimalHero() {
                         style={{ zIndex: 2 }}
                         
                     />
-                    <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNESO</span>
+                    <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNESCO</span>
                 </button>
                 <button onClick={() => setPage('unhcr')} className="committee-icon-animation relative flex items-center group" data-delay="3800">
                     {/* Committee icon */}
@@ -615,7 +616,7 @@ export default function MinimalHero() {
                     <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>DISEC</span>
                 </button>
 
-                <button onClick={() => setPage('cgsd')} className="committee-icon-animation relative flex items-center group" data-delay="5100">
+                <button onClick={() => setPage('ecosoc')} className="committee-icon-animation relative flex items-center group" data-delay="5100">
                     {/* Committee icon */}
                     <Image
                         width={64} height={64}
@@ -624,7 +625,7 @@ export default function MinimalHero() {
                         alt=""
                         style={{ zIndex: 2 }}
                     />
-                    <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>CGSD</span>
+                    <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>ECOSOC</span>
                 </button>
             </div>
 

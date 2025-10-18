@@ -1,14 +1,14 @@
 import Hero from '@/components/hero';
-import Uneso from '@/components/uneso';
+import Unesco from '@/components/unesco';
 import Disec from '@/components/disec';
 import Unhcr from '@/components/unhcr';
 import Unsc from '@/components/unsc';
 import Unoosa from '@/components/unoosa';
 import Unodc from '@/components/unodc';
-import Cgsd from '@/components/cgsd';
+import Ecosoc from '@/components/ecosoc';
 
 export interface PageDeciderProps {
-    renderPage: 'hero' | 'uneso' | 'unhcr' | 'unodc' | 'unsc' | 'unoosa' | 'disec' | 'cgsd';
+    renderPage: 'hero' | 'unesco' | 'unhcr' | 'unodc' | 'unsc' | 'unoosa' | 'disec' | 'ecosoc';
 }
 
 const renderedPage = (renderPage: string) => {
@@ -23,10 +23,10 @@ const renderedPage = (renderPage: string) => {
             return <Unoosa />;
         case 'disec':
             return <Disec />;
-        case 'uneso':
-            return <Uneso />;
-        case 'cgsd':
-            return <Cgsd />;
+        case 'unesco':
+            return <Unesco />;
+        case 'ecosoc':
+            return <Ecosoc />;
         case 'hero':
             return <Hero />;
         default:
