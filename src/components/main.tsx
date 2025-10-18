@@ -121,13 +121,16 @@ export default function MinimalHero() {
       {page === 'hero' ? (
         /* Hero Page */
         <>
-          {/* Background SVG grid and animated lines/dots */}
+          {/* Animated committee lines */}
+          <div></div>
           <div id='unesco-connector' className='connectors'></div>
           <div id='unhcr-connector' className='connectors'></div>
           <div id='unoosa-connector' className='connectors'></div>
           <div id='ecosoc-connector' className='connectors'></div>
           <div id='unodc-connector' className='connectors'></div>
           <div id='unsc-connector' className='connectors'></div>
+
+          {/* Background SVG grid and dots */}
           <svg
             className="absolute inset-0 h-full w-full"
             xmlns="http://www.w3.org/2000/svg"
@@ -242,6 +245,7 @@ export default function MinimalHero() {
                                     setTimeout(() => {
                                         const rect = el.getBoundingClientRect();
                                         const container = document.getElementById('unesco-connector');
+                                        console.log(rect, container);
                                         if (container) {
                                             container.innerHTML = `
                                                 <svg
