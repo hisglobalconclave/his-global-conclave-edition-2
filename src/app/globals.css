@@ -147,7 +147,9 @@ img {
     opacity: 1;
     filter: drop-shadow(4px 0 6px #c8b4a0);
     transition: opacity 0.3s, filter 0.3s;
-    animation: underline-grow 100s forwards;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw-line 3s ease-out forwards;
 }
 
 .word {
@@ -299,6 +301,12 @@ img {
 @keyframes underline-grow {
   to {
     width: 100%;
+  }
+}
+
+@keyframes draw-line {
+  to {
+    stroke-dashoffset: 0;
   }
 }
 
