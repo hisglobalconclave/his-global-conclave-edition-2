@@ -24,6 +24,7 @@ const colors = {
 export default function MinimalHero() {
   const [page, setPage] = useState<'hero' | 'uneso' | 'unhcr' | 'unodc' | 'unsc' | 'unoosa' | 'disec' | 'cgsd'>("hero");
   const gradientRef = useRef<HTMLDivElement>(null);
+  
   useEffect(() => {
     // Only run the hero-specific DOM effects when the hero is visible
     if (page !== 'hero') return;
@@ -31,20 +32,22 @@ export default function MinimalHero() {
       '.word, .committee-icon-animation, .custom-button, .highlighted-text'
     );
 
-      animatedElements.forEach((element) => {
-        const delay = parseInt(element.getAttribute('data-delay') || '0', 10);
-        setTimeout(() => {
-          element.style.animation = 'word-appear 0.8s ease-out forwards';
-        }, delay);
-      });
+    // animation for animated elements
+    animatedElements.forEach((element) => {
+    const delay = parseInt(element.getAttribute('data-delay') || '0', 10);
+    setTimeout(() => {
+        element.style.animation = 'word-appear 0.8s ease-out forwards';
+    }, delay);
+    });
 
-      document.querySelectorAll<HTMLElement>('.icons').forEach((element) => {
-        const delay = parseInt(element.getAttribute('data-delay') || '0', 10);
-        setTimeout(() => {
-          element.style.opacity = '1';
-          element.style.animation = 'var(--animate-bounce)';
-        }, delay);
-      });
+    // Seperate animation for committee icons
+    document.querySelectorAll<HTMLElement>('.icons').forEach((element) => {
+    const delay = parseInt(element.getAttribute('data-delay') || '0', 10);
+    setTimeout(() => {
+        element.style.opacity = '1';
+        element.style.animation = 'var(--animate-bounce)';
+    }, delay);
+    });
 
     // Mouse gradient
     const gradient = gradientRef.current;
@@ -70,7 +73,7 @@ export default function MinimalHero() {
           element.style.textShadow = 'none';
         });
       });
-      
+
     // Click ripple effect
     function onClick(e: MouseEvent) {
       const ripple = document.createElement('div');

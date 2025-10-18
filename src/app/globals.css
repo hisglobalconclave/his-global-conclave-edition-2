@@ -176,15 +176,6 @@ img {
   animation: grid-draw 2s ease-out forwards;
 }
 
-.grid-line-commitee {
-    stroke: #c8b4a0;
-    stroke-width: 5;
-    opacity: 0.2;
-    stroke-dasharray: 5 5;
-    stroke-dashoffset: 1000;
-    animation: grid-draw 2s ease-out forwards;
-}
-
 .detail-dot {
   fill: #c8b4a0;
   opacity: 0;
