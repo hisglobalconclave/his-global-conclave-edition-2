@@ -24,36 +24,56 @@ const colors = {
 export default function MinimalHero() {
   const [page, setPage] = useState<'hero' | 'unesco' | 'unhcr' | 'unodc' | 'unsc' | 'unoosa' | 'disec' | 'ecosoc'>("hero");
   const [animationPlayed, setAnimationPlayed] = useState(false);
+  const committeeLineWaitTime = animationPlayed ? 0 : 6000;
   const gradientRef = useRef<HTMLDivElement>(null);
   
-  useEffect(() => {
+    useEffect(() => {
     // Only run the hero-specific DOM effects when the hero is visible
-    if (page !== 'hero' || animationPlayed) return;
-    
-    document.querySelectorAll<HTMLElement>('.committee-icon').forEach(() => {
-        
-    });
+    if (page !== 'hero') return;
 
-    const animatedElements = document.querySelectorAll<HTMLElement>(
-      '.word, .committee-icon, .custom-button, .highlighted-text'
-    );
+        const animatedElements = document.querySelectorAll<HTMLElement>(
+                '.word, .committee-icon, .custom-button, .highlighted-text'
+                );
+        // track timeouts so we can clear them on cleanup (prevents races on first visit)
+        const timeouts: number[] = [];
 
-    // animation for animated elements
-    animatedElements.forEach((element) => {
-    const delay = parseInt(element.getAttribute('data-delay') || '0', 10);
-    setTimeout(() => {
-        element.style.animation = 'word-appear 0.8s ease-out forwards';
-    }, delay);
-    });
+        // named handler so we can remove it cleanly in cleanup
+        function handleCommitteeIconClick() {
+            setAnimationPlayed(true);
+        }
 
-    // Seperate animation for committee icons
-    document.querySelectorAll<HTMLElement>('.icons').forEach((element) => {
-    const delay = parseInt(element.getAttribute('data-delay') || '0', 10);
-    setTimeout(() => {
-        element.style.opacity = '1';
-        element.style.animation = 'var(--animate-bounce)';
-    }, delay);
-    });
+        // If animation has played, make animated elements visible immediately
+        if (animationPlayed) {
+            document.querySelectorAll<HTMLElement>('.word, .committee-icon, .custom-button, .highlighted-text, .icons').forEach((element) => {
+                element.style.opacity = '1';
+            });
+        }
+
+        if (!animationPlayed) {
+                // Set animation true if committee icons are pressed
+                document.querySelectorAll<HTMLElement>('.committee-icon').forEach((icon) => {
+                    icon.addEventListener('click', handleCommitteeIconClick);
+                });
+
+                // Animation for animated elements
+                animatedElements.forEach((element) => {
+                const delay = parseInt(element.getAttribute('data-delay') || '0', 10);
+                const id = window.setTimeout(() => {
+                        element.style.animation = 'word-appear 0.8s ease-out forwards';
+                }, delay);
+                timeouts.push(id);
+                });
+
+                // Seperate animation for committee icons
+                document.querySelectorAll<HTMLElement>('.icons').forEach((element) => {
+                const delay = parseInt(element.getAttribute('data-delay') || '0', 10);
+                const id = window.setTimeout(() => {
+                        element.style.opacity = '1';
+                        element.style.animation = 'var(--animate-bounce)';
+                }, delay);
+                timeouts.push(id);
+                });
+        }
 
     // Mouse gradient
     const gradient = gradientRef.current;
@@ -71,14 +91,14 @@ export default function MinimalHero() {
     document.addEventListener('mouseleave', onMouseLeave);
 
     // Hover glow effect
-      animatedElements.forEach((element) => {
+    animatedElements.forEach((element) => {
         element.addEventListener('mouseenter', () => {
-          element.style.textShadow = '0 0 20px rgba(200, 180, 160, 0.5)';
+        element.style.textShadow = '0 0 20px rgba(200, 180, 160, 0.5)';
         });
         element.addEventListener('mouseleave', () => {
-          element.style.textShadow = 'none';
+        element.style.textShadow = 'none';
         });
-      });
+    });
 
     // Click ripple effect
     function onClick(e: MouseEvent) {
@@ -114,13 +134,18 @@ export default function MinimalHero() {
     }
     window.addEventListener('scroll', onScroll);
 
-    return () => {
-      document.removeEventListener('mousemove', onMouseMove);
-      document.removeEventListener('mouseleave', onMouseLeave);
-      document.removeEventListener('click', onClick);
-      window.removeEventListener('scroll', onScroll);
-    };
-  }, [page]);
+        return () => {
+            // clear any scheduled animation timeouts to avoid them firing after unmount
+            timeouts.forEach((t) => clearTimeout(t));
+            document.removeEventListener('mousemove', onMouseMove);
+            document.removeEventListener('mouseleave', onMouseLeave);
+            document.removeEventListener('click', onClick);
+            window.removeEventListener('scroll', onScroll);
+            document.querySelectorAll<HTMLElement>('.committee-icon').forEach((icon) => {
+                icon.removeEventListener('click', handleCommitteeIconClick);
+            });
+        };
+    }, [page, animationPlayed]);
 
   return (
     <div className="font-primary relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-[#1a1d18] via-black to-[#2a2e26] text-[#e6e1d7]">
@@ -147,38 +172,38 @@ export default function MinimalHero() {
               </pattern>
             </defs>
             <rect width="100%" height="100%" fill="url(#grid)" />
-            <line x1="0" y1="20%" x2="100%" y2="20%" className="grid-line" style={{ animationDelay: '0.5s' }} />
-            <line x1="0" y1="80%" x2="100%" y2="80%" className="grid-line" style={{ animationDelay: '1s' }} />
-            <line x1="20%" y1="0" x2="20%" y2="100%" className="grid-line" style={{ animationDelay: '1.5s' }} />
-            <line x1="80%" y1="0" x2="80%" y2="100%" className="grid-line" style={{ animationDelay: '2s' }} />
-            <line x1="50%" y1="0" x2="50%" y2="100%" className="grid-line" style={{ animationDelay: '2.5s', opacity: 0.05 }} />
-            <line x1="0" y1="50%" x2="100%" y2="50%" className="grid-line" style={{ animationDelay: '3s', opacity: 0.05 }} />
-            <circle cx="20%" cy="20%" r="2" className="detail-dot" style={{ animationDelay: '3s' }} />
-            <circle cx="80%" cy="20%" r="2" className="detail-dot" style={{ animationDelay: '3.2s' }} />
-            <circle cx="20%" cy="80%" r="2" className="detail-dot" style={{ animationDelay: '3.4s' }} />
-            <circle cx="80%" cy="80%" r="2" className="detail-dot" style={{ animationDelay: '3.6s' }} />
-            <circle cx="50%" cy="50%" r="1.5" className="detail-dot" style={{ animationDelay: '4s' }} />
+            <line x1="0" y1="20%" x2="100%" y2="20%" className="grid-line" style={{ animationDelay: animationPlayed ? '0' : '0.5s' }} />
+            <line x1="0" y1="80%" x2="100%" y2="80%" className="grid-line" style={{ animationDelay: animationPlayed ? '0' : '1s' }} />
+            <line x1="20%" y1="0" x2="20%" y2="100%" className="grid-line" style={{ animationDelay: animationPlayed ? '0' : '1.5s' }} />
+            <line x1="80%" y1="0" x2="80%" y2="100%" className="grid-line" style={{ animationDelay: animationPlayed ? '0' : '2s' }} />
+            <line x1="50%" y1="0" x2="50%" y2="100%" className="grid-line" style={{ animationDelay: animationPlayed ? '0' : '2.5s', opacity: 0.05 }} />
+            <line x1="0" y1="50%" x2="100%" y2="50%" className="grid-line" style={{ animationDelay: animationPlayed ? '0' : '3s', opacity: 0.05 }} />
+            <circle cx="20%" cy="20%" r="2" className="detail-dot" style={{ animationDelay: animationPlayed ? '0' : '3s' }} />
+            <circle cx="80%" cy="20%" r="2" className="detail-dot" style={{ animationDelay: animationPlayed ? '0' : '3.2s' }} />
+            <circle cx="20%" cy="80%" r="2" className="detail-dot" style={{ animationDelay: animationPlayed ? '0' : '3.4s' }} />
+            <circle cx="80%" cy="80%" r="2" className="detail-dot" style={{ animationDelay: animationPlayed ? '0' : '3.6s' }} />
+            <circle cx="50%" cy="50%" r="1.5" className="detail-dot" style={{ animationDelay: animationPlayed ? '0' : '4s' }} />
           </svg>
 
           {/* Corner elements */}
-          <div className="corner-element top-8 left-8" style={{ animationDelay: '4s' }}>
+          <div className="corner-element top-8 left-8" style={{ animationDelay: animationPlayed ? '0' : '4s' }}>
             <div className="absolute top-0 left-0 h-2 w-2 opacity-30" style={{ background: colors[200] }} />
           </div>
-          <div className="corner-element top-8 right-8" style={{ animationDelay: '4.2s' }}>
+          <div className="corner-element top-8 right-8" style={{ animationDelay: animationPlayed ? '0' : '4.2s' }}>
             <div className="absolute top-0 right-0 h-2 w-2 opacity-30" style={{ background: colors[200] }} />
           </div>
-          <div className="corner-element bottom-8 left-8" style={{ animationDelay: '4.4s' }}>
+          <div className="corner-element bottom-8 left-8" style={{ animationDelay: animationPlayed ? '0' : '4.4s' }}>
             <div className="absolute bottom-0 left-0 h-2 w-2 opacity-30" style={{ background: colors[200] }} />
           </div>
-          <div className="corner-element right-8 bottom-8" style={{ animationDelay: '4.6s' }}>
+          <div className="corner-element right-8 bottom-8" style={{ animationDelay: animationPlayed ? '0' : '4.6s' }}>
             <div className="absolute right-0 bottom-0 h-2 w-2 opacity-30" style={{ background: colors[200] }} />
           </div>
 
           {/* Floating elements */}
-          <div className="floating-element" style={{ top: '25%', left: '15%', animationDelay: '5s' }} />
-          <div className="floating-element" style={{ top: '60%', left: '85%', animationDelay: '5.5s' }} />
-          <div className="floating-element" style={{ top: '40%', left: '10%', animationDelay: '6s' }} />
-          <div className="floating-element" style={{ top: '75%', left: '90%', animationDelay: '6.5s' }} />
+          <div className="floating-element" style={{ top: '25%', left: '15%', animationDelay: animationPlayed ? '0' : '5s' }} />
+          <div className="floating-element" style={{ top: '60%', left: '85%', animationDelay: animationPlayed ? '0' : '5.5s' }} />
+          <div className="floating-element" style={{ top: '40%', left: '10%', animationDelay: animationPlayed ? '0' : '6s' }} />
+          <div className="floating-element" style={{ top: '75%', left: '90%', animationDelay: animationPlayed ? '0' : '6.5s' }} />
 
           <Logo />
 
@@ -191,7 +216,7 @@ export default function MinimalHero() {
                 <div className="relative mx-auto max-w-5xl text-center">
                     <h1
                         className="relative text-decoration text-3xl leading-tight font-extralight tracking-tight md:text-5xl lg:text-6xl 2xl:text-9xl"
-                        style={{ color: colors[50] }}
+                        style={{ color: colors[50], animationDelay: animationPlayed ? '0s' : '2s' }}
                     >
                         <div className="mb-4 md:mb-6">
                             <div className='block'>
@@ -268,7 +293,7 @@ export default function MinimalHero() {
                                                 </svg>
                                             `;
                                         }
-                                    }, 6000); // Wait for animation
+                                    }, committeeLineWaitTime); // Wait for animation
                                 }
                             }}
                         >
@@ -311,7 +336,7 @@ export default function MinimalHero() {
                                                 </svg>
                                             `;
                                         }
-                                    }, 6000); // Wait for animation
+                                    }, committeeLineWaitTime); // Wait for animation
                                 }
                             }}
                         >
@@ -356,7 +381,7 @@ export default function MinimalHero() {
                                                 </svg>
                                             `;
                                         }
-                                    }, 6000); // Wait for animation
+                                    }, committeeLineWaitTime); // Wait for animation
                                 }
                             }}
                             >
@@ -409,7 +434,7 @@ export default function MinimalHero() {
                                                 </svg>
                                             `;
                                         }
-                                    }, 6000); // Wait for animation
+                                    }, committeeLineWaitTime); // Wait for animation
                                 }
                             }}
                         >
@@ -453,7 +478,7 @@ export default function MinimalHero() {
                                                 </svg>
                                             `;
                                         }
-                                    }, 6000); // Wait for animation
+                                    }, committeeLineWaitTime); // Wait for animation
                                 }
                             }}
                         >
@@ -493,7 +518,7 @@ export default function MinimalHero() {
                                                 </svg>
                                             `;
                                         }
-                                    }, 6000); // Wait for animation
+                                    }, committeeLineWaitTime); // Wait for animation
                                 }
                             }}
                         >
