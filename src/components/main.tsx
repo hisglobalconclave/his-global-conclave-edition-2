@@ -276,6 +276,7 @@ export default function MinimalHero() {
                                     setTimeout(() => {
                                         const rect = el.getBoundingClientRect();
                                         const container = document.getElementById('unesco-connector');
+                                        console.log(rect, container);
                                         if (container) {
                                             container.innerHTML = `
                                                 <svg
