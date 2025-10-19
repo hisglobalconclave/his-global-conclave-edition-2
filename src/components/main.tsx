@@ -37,7 +37,7 @@ export default function MinimalHero() {
 
         // If animation has played, make animated elements visible immediately
         if (animationPlayed) {
-            document.querySelectorAll<HTMLElement>('.word, .committee-icon, .custom-button, .highlighted-text, .icons').forEach((element) => {
+            document.querySelectorAll<HTMLElement>('.word, .committee-icon, .committee-icon-animation, .custom-button, .highlighted-text, .icons').forEach((element) => {
                 element.style.opacity = '1';
             });
         }
