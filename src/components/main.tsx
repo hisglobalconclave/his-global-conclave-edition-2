@@ -148,12 +148,12 @@ export default function MinimalHero() {
         <>
           {/* Animated committee lines */}
           <div></div>
-          <div id='unesco-connector' className='connectors'></div>
-          <div id='unhcr-connector' className='connectors'></div>
-          <div id='unoosa-connector' className='connectors'></div>
-          <div id='ecosoc-connector' className='connectors'></div>
-          <div id='unodc-connector' className='connectors'></div>
-          <div id='unsc-connector' className='connectors'></div>
+          <div id='unesco-connector' className='connectors md:inline hidden'></div>
+          <div id='unhcr-connector' className='connectors md:inline hidden'></div>
+          <div id='unoosa-connector' className='connectors md:inline hidden'></div>
+          <div id='ecosoc-connector' className='connectors md:inline hidden'></div>
+          <div id='unodc-connector' className='connectors md:inline hidden'></div>
+          <div id='unsc-connector' className='connectors md:inline hidden'></div>
 
           {/* Background SVG grid and dots */}
           <svg
