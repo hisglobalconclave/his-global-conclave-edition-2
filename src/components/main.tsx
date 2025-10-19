@@ -203,7 +203,7 @@ export default function MinimalHero() {
 
           <div className='h-full w-full min-h-screen px-4'>
             {/* Hero Text */}
-            <div className='relative flex flex-col items-center justify-between w-full h-screen'>
+            <div className='relative flex flex-col items-center justify-between w-full min-h-screen'>
                 <div className='None h-[110px]'></div>
 
                 {/* Main headline */}
