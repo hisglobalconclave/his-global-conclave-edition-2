@@ -592,7 +592,7 @@ export default function MinimalHero() {
 
           {/* Mobile Committee Icons */}
           <div className='flex flex-col justify-between min-h-screen md:hidden'>
-            {/* Left Side Committee Icons */}
+            {/* Top Side Committee Icons */}
             <div className='flex justify-between m-10 items-center'>
                 <button onClick={() => setPage('unesco')} className="committee-icon-animation relative flex items-center group" data-delay="4100">
                     {/* Committee icon */}
@@ -659,7 +659,7 @@ export default function MinimalHero() {
                 </button>
             </div>
 
-            {/* Right Side Committee Icons */}
+            {/* Bottom Side Committee Icons */}
             <div className="flex justify-between m-10 mb-30 items-center">
                 <button onClick={() => setPage('unodc')} className="committee-icon-animation relative flex items-center group" data-delay="5400">
                     {/* Committee icon */}
