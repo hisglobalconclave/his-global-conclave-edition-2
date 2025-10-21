@@ -262,17 +262,17 @@ img {
 }
 
 .left-side-committee-icons {
-    top: 50%;
-    left: -40%;
+    top: 4rem;
+    left: -10rem;
 }
 
 .center-side-committee-icons {
-    top: -50%;
+    top: -8rem;
 }
 
 .right-side-committee-icons {
-    top: 50%;
-    right: -40%;
+    top: 4rem;
+    right: -10rem;
 }
 
 .custom-button {

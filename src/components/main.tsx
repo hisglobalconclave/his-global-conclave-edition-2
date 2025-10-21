@@ -207,7 +207,7 @@ export default function MinimalHero() {
                 <div className='None h-[110px]'></div>
 
                 {/* Main headline */}
-                <div className="relative mx-auto max-w-5xl text-center">
+                <div className="relative mx-auto max-w-5xl text-center mt-10 mb-20 md:my-40">
                     <h1
                         className="relative text-decoration text-3xl leading-tight font-extralight tracking-tight md:text-5xl lg:text-6xl 2xl:text-9xl"
                         style={{ color: colors[50], animationDelay: animationPlayed ? '0s' : '2s' }}
