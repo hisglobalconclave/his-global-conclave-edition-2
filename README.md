@@ -35,15 +35,20 @@ The website is now live and accessible at:
 
 ## 🧑‍💻 Developer & Credits
 
-**Developed by:**  
-👨‍💻 *Bhuvanaesh R*  
-Grade 12, Batch 2025-26  
-**Hindustan International School, Karapakkam**
+- **Developer / Project Lead:**  
+  👨‍💻 [Bhuvanaesh R](https://github.com/Bhuvanaesh-R)  
+  Grade 12, Batch 2025-26, Hindustan International School, Karapakkam
 
-**Website structure and layout plan conceptualized by:**
-👨‍💻 *Keshav Rajesh*  
-Grade 12, Batch 2025-26  
-**Hindustan International School, Karapakkam**
+- **Website Structure & Layout Conceptualized by:**  
+  👨‍💻 [Keshav Rajesh](https://github.com/swdbrn)  
+  Grade 12, Batch 2025-26, Hindustan International School, Karapakkam
+
+- **Bug Testing & Issue Reporting:**  
+  👨‍💻 [Keshav Rajesh](https://github.com/swdbrn)  
+  Grade 12, Batch 2025-26, Hindustan International School, Karapakkam
+
+  👨‍💻 [Gautham Vanan](https://github.com/contributor2-github)  
+  Grade 12, Batch 2025-26, Hindustan International School, Karapakkam
 
 ---
 
