@@ -77,10 +77,15 @@
 
 }
 
-
 img {
-    max-width: none;
-
+  max-width: none;
+  user-drag: none; /* For Safari */
+  -webkit-user-drag: none; /* For WebKit browsers */
+  user-select: none; /* Prevent text/image selection */
+  -moz-user-select: none; /* For Firefox */
+  -webkit-user-select: none; /* For WebKit browsers */
+  -ms-user-select: none; /* For Internet Explorer/Edge */
+  pointer-events: none; /* Disable pointer events */
 }
 
 @keyframes word-appear {
@@ -238,6 +243,16 @@ img {
     color: #c8b4a0;
 }
 
+.committee-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 500px;
+    object-fit: cover;
+    border: 2px solid #c8b4a0;
+    box-shadow: 0 0 10px rgba(200, 180, 160, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 @media (min-width: 768px) {
     .mono-label {
         font-size: 0.875rem; /* md:text-sm */
@@ -248,28 +263,16 @@ img {
     .mono-label {
         font-size: 1.25rem; /* 2xl:text-xl */
     }
+    .committee-icon {
+        width: 96px;
+        height: 96px;
+    }
 }
 
 @media (min-width: 120rem) {
     .mono-label {
         font-size:  1.5rem; /* 3xl:text-2xl */
     }
-}
-
-@media (min-width: 144rem) {
-    .mono-label {
-        font-size: 1.875rem; /* 4xl:text-3xl */
-    }
-}
-
-.committee-icon {
-    width: 72px;
-    height: 72px;
-    border-radius: 500px;
-    object-fit: cover;
-    border: 2px solid #c8b4a0;
-    box-shadow: 0 0 10px rgba(200, 180, 160, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .committee-icon-animation {
