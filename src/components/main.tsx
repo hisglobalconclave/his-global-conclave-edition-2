@@ -300,7 +300,7 @@ export default function MinimalHero() {
                                 style={{ zIndex: 2 }}
                                 
                             />
-                            <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNESCO</span>
+                            <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8 2xl:translate-y-10 3xl:translate-y-12'>UNESCO</span>
                         </button>
 
                         {/* UNHCR */}
@@ -342,7 +342,7 @@ export default function MinimalHero() {
                                 alt="unhcr-icon"
                                 style={{ zIndex: 2 }}
                             />
-                            <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNHCR</span>
+                            <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8 2xl:translate-y-10 3xl:translate-y-12'>UNHCR</span>
                         </button>
                     </div>
 
@@ -387,7 +387,7 @@ export default function MinimalHero() {
                                 alt="unoosa-icon"
                                 style={{ zIndex: 2 }}
                             />
-                            <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNOOSA</span>
+                            <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8 2xl:translate-y-10 3xl:translate-y-12'>UNOOSA</span>
                         </button>
 
                         <button onClick={() => setPage('disec')} className="committee-icon-animation relative flex items-center group mb-20" data-delay="4300">
@@ -399,7 +399,7 @@ export default function MinimalHero() {
                                 alt="disec-icon"
                                 style={{ zIndex: 2 }}
                             />
-                            <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>DISEC</span>
+                            <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8 2xl:translate-y-10 3xl:translate-y-12'>DISEC</span>
                         </button>
 
                         <button onClick={() => setPage('ecosoc')}
@@ -440,7 +440,7 @@ export default function MinimalHero() {
                                 alt="cgsd-icon"
                                 style={{ zIndex: 2 }}
                             />
-                            <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>ECOSOC</span>
+                            <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8 2xl:translate-y-10 3xl:translate-y-12'>ECOSOC</span>
                         </button>
                     </div>
 
@@ -484,7 +484,7 @@ export default function MinimalHero() {
                                 alt="unodc-icon"
                                 style={{ zIndex: 2 }}
                             />
-                            <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNODC</span>
+                            <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8 2xl:translate-y-10 3xl:translate-y-12'>UNODC</span>
                         </button>
                         <button onClick={() => setPage('unsc')}
                             className="committee-icon-animation relative flex items-center group mt-30"
@@ -524,7 +524,7 @@ export default function MinimalHero() {
                                 alt="unsc-icon"
                                 style={{ zIndex: 2 }}
                             />
-                            <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNSC</span>
+                            <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8 2xl:translate-y-10 3xl:translate-y-12'>UNSC</span>
                         </button>
                     </div>
                 </div>
