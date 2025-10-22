@@ -347,7 +347,7 @@ export default function MinimalHero() {
                     </div>
 
                     {/* Center Side Committee Icons */}
-                    <div className='absolute center-side-committee-icons md:flex w-full flex-row items-center justify-between hidden'>
+                    <div className='absolute center-side-committee-icons md:flex w-full flex-row items-center justify-between hidden 2xl:justify-center 2xl:space-x-40 3xl:space-x-60 4xl:space-x-70'>
 
                         <button onClick={() => setPage('unoosa')}
                             className="committee-icon-animation relative flex items-center group translate -translate-x-10"
