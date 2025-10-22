@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@theme {
+  --breakpoint-3xl: 120rem;
+  --breakpoint-4xl: 144rem;
+}
 
 :root {
     --radius: 0.625rem;
@@ -237,6 +241,24 @@ img {
 @media (min-width: 768px) {
     .mono-label {
         font-size: 0.875rem; /* md:text-sm */
+    }
+}
+
+@media (min-width: 96rem) {
+    .mono-label {
+        font-size: 1.25rem; /* 2xl:text-xl */
+    }
+}
+
+@media (min-width: 120rem) {
+    .mono-label {
+        font-size:  1.5rem; /* 3xl:text-2xl */
+    }
+}
+
+@media (min-width: 144rem) {
+    .mono-label {
+        font-size: 1.875rem; /* 4xl:text-3xl */
     }
 }
 

@@ -7,7 +7,7 @@ export default function Logo() {
             {/* Top tagline */}
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 text-center pt-10">
           <div
-            className="font-mono text-xs font-light tracking-[0.2em] uppercase opacity-80 md:text-sm flex flex-row items-center justify-center"
+            className="font-mono text-xs font-light tracking-[0.2em] uppercase opacity-80 md:text-sm 2xl:text-xl flex flex-row items-center justify-center"
             style={{ color: '#c8b4a0' }}
           >
             <div className='block text-center'>

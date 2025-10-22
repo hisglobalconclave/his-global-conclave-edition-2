@@ -207,9 +207,9 @@ export default function MinimalHero() {
                 <div className='None h-[110px]'></div>
 
                 {/* Main headline */}
-                <div className="relative mx-auto max-w-5xl text-center mt-10 mb-20 md:my-40">
+                <div className="relative mx-auto max-w-6xl text-center mt-10 mb-20 md:my-40">
                     <h1
-                        className="relative text-decoration text-3xl leading-tight font-extralight tracking-tight md:text-5xl lg:text-6xl 2xl:text-9xl"
+                        className="relative text-decoration text-3xl leading-tight font-extralight tracking-tight md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl 3xl:text-9xl 4xl:text-[9rem]"
                         style={{ color: colors[50], animationDelay: animationPlayed ? '0s' : '2s' }}
                     >
                         <div className="mb-4 md:mb-6">
@@ -234,7 +234,7 @@ export default function MinimalHero() {
                             </div>
                         </div>
                         <div
-                            className="text-2xl leading-relaxed font-thin md:text-3xl lg:text-4xl 2xl:text-7xl"
+                            className="text-2xl leading-relaxed font-thin md:text-3xl lg:text-4xl 2xl:text-6xl 3xl:text-7xl"
                             style={{ color: colors[200] }}
                         >
                             <span className="word" data-delay="2100">
@@ -247,7 +247,7 @@ export default function MinimalHero() {
                                 Nations
                             </span>
                         </div>
-                        <div className="absolute custom-button -bottom-[70px] left-[50%] translate translate-x-[-50%] flex justify-center text-center" data-delay="2500">
+                        <div className="absolute custom-button -bottom-[4rem] 2xl:-bottom-[5rem] 3xl:-bottom-[6rem] 4xl:-bottom-[7rem] left-[50%] translate translate-x-[-50%] flex justify-center text-center" data-delay="2500">
                             <HoverBorderGradient
                                 className="mono-label text-sm custom-button 2xl:text-xl"
                                 onClick={() => window.open("https://forms.gle/Vcmu4Wq2qEURGejk6", "_blank")}
@@ -536,7 +536,7 @@ export default function MinimalHero() {
                         style={{background: `linear-gradient(to right, transparent, ${colors[200]}, transparent)`}}
                     ></div>
                     <h2
-                        className="font-mono text-xs font-light tracking-[0.2em] uppercase opacity-80 md:text-sm"
+                        className="font-mono text-xs font-light tracking-[0.2em] uppercase opacity-80 md:text-sm lg:text-base 2xl:text-lg 3xl:text-xl 4xl:text-2xl"
                         style={{ color: colors[200] }}
                     >
                         <span className="word word-space" data-delay="2650">
