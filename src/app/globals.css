@@ -85,7 +85,6 @@ img {
   -moz-user-select: none; /* For Firefox */
   -webkit-user-select: none; /* For WebKit browsers */
   -ms-user-select: none; /* For Internet Explorer/Edge */
-  pointer-events: none; /* Disable pointer events */
 }
 
 @keyframes word-appear {
