@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 HIS Global Conclave Edition 2
+### *Fostering Global Dialogue for a Better Future*
 
-## Getting Started
+Official MUN website of **Hindustan International School, Karapakkam**, built for **Global Conclave Edition 2** — a Model United Nations event promoting diplomacy, debate, and international collaboration among students.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🧩 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 📝 **Registration Portal** – Delegate and participant registration system  
+- 🌍 **Committees Overview** – Detailed information about each MUN committee  
+- 🗒️ **Agenda & Topics** – View current global issues being discussed  
+- 📘 **Background Guides** – Access resources to prepare for debates  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tech Stack
 
-## Learn More
+| Technology | Purpose |
+|-------------|----------|
+| [Next.js](https://nextjs.org/) | React framework for building the web app |
+| [React](https://react.dev/) | Core library for building UI components |
+| [TypeScript](https://www.typescriptlang.org/) | Type safety and cleaner development |
+| [Tailwind CSS](https://tailwindcss.com/) | Styling and responsive design |
+| Other React Libraries | Additional UI components and animations |
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The website is now live and accessible at:  
+🔗 **[http://bhuvanaeshr.me/his-global-conclave-edition-2/](http://bhuvanaeshr.me/his-global-conclave-edition-2/)**
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🧑‍💻 Developer & Credits
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Developer / Project Lead:**  
+  👨‍💻 [Bhuvanaesh R](https://github.com/Bhuvanaesh-R)  
+  Grade 12, Batch 2025-26, Hindustan International School, Karapakkam
+
+- **Website Structure & Layout Conceptualized by:**  
+  👨‍💻 [Keshav Rajesh](https://github.com/swdbrn)  
+  Grade 12, Batch 2025-26, Hindustan International School, Karapakkam
+
+- **Bug Testing & Issue Reporting:**  
+  👨‍💻 [Keshav Rajesh](https://github.com/swdbrn)  
+  Grade 12, Batch 2025-26, Hindustan International School, Karapakkam
+
+  👨‍💻 [Gautham Vanan](https://github.com/contributor2-github)  
+  Grade 12, Batch 2025-26, Hindustan International School, Karapakkam
+
+---
+
+## 🔒 License & Ownership
+
+This project was **developed and maintained by Bhuvanaesh R** for  
+**Hindustan International School, Karapakkam** as part of the HIS Global Conclave initiative.
+
+All event content, branding, and media belong to the school.  
+The source code and technical implementation remain the intellectual property of **Bhuvanaesh R**,  
+and may be showcased for portfolio or educational purposes with attribution.
+
+---
+
+## 🏫 About the Event
+
+**HIS Global Conclave Edition 2** is an annual Model United Nations event that encourages young delegates to explore pressing global issues, enhance diplomatic skills, and foster collaboration.  
+This website serves as the official platform for event information, committee details, and participant registration.
+
+---
+
+## 💡 Future Improvements
+
+- Integrate admin dashboard for registration management  
+- Add dynamic event updates and announcements  
+- Support dark mode and accessibility improvements  
+
+---
+
+### ✨ “Fostering Global Dialogue for a Better Future.”
