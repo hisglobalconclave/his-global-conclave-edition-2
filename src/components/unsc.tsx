@@ -5,9 +5,9 @@ import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 export default function Unsc() {
     return (
-        <div className="relative h-full w-full flex flex-col md:flex-row md:justify-between items-center md:items-start p-10 z-10">
+        <div className="relative h-full w-full flex flex-col lg:flex-row lg:justify-between items-center lg:items-start p-10 z-10">
 
-            <div className="relative md:min-h-[650px] w-full max-w-[275px] items-center flex flex-col justify-between mx-10 mt-20 mb-8 md:mb-0">
+            <div className="relative lg:min-h-[650px] w-full max-w-[275px] items-center flex flex-col justify-between mx-10 mt-20 mb-8 lg:mb-0">
                 <ExpandableCard
                     title="UNSC"
                     description="United Nations Security Council"
@@ -25,7 +25,7 @@ export default function Unsc() {
                     <p className="text-justify">The United Nations Security Council (UNSC) is one of the six principal organs of the United Nations, responsible for maintaining international peace and security. It has the power to make decisions that member states are obligated to implement under the UN Charter. The UNSC can impose sanctions, authorize the use of force, and establish peacekeeping operations.</p>
                 </div>
             </div>
-            <div className="w-full h-full items-center px-4 flex flex-col justify-center mb-8 md:mb-0">
+            <div className="w-full h-full items-center px-4 flex flex-col justify-center mb-8 lg:mb-0">
                 <h1 className="mono-label text-lg font-semibold mb-8">Background Guide</h1>
                 <iframe src="https://drive.google.com/file/d/1uMVlV_41NPIMUWJJFDMqvjsylvCCQRhK/preview" className="w-full min-w-[300px] max-w-[500px] h-full min-h-[700px]" />
 

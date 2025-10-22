@@ -5,9 +5,9 @@ import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 export default function Unoosa() {
     return (
-        <div className="relative h-full w-full flex flex-col md:flex-row md:justify-between items-center md:items-start p-10 z-10">
+        <div className="relative h-full w-full flex flex-col lg:flex-row lg:justify-between items-center lg:items-start p-10 z-10">
 
-            <div className="relative md:min-h-[650px] w-full max-w-[275px] items-center flex flex-col justify-between mx-10 mt-20 mb-8 md:mb-0">
+            <div className="relative lg:min-h-[650px] w-full max-w-[275px] items-center flex flex-col justify-between mx-10 mt-20 mb-8 lg:mb-0">
                 <ExpandableCard
                     title="UNOOSA"
                     description="United Nations Office for Outer Space Affairs"
@@ -25,7 +25,7 @@ export default function Unoosa() {
                     <p className="text-justify">The United Nations Office for Outer Space Affairs (UNOOSA) is a UN office that promotes international cooperation in the peaceful use and exploration of outer space. It provides a platform for dialogue and collaboration among member states, facilitates capacity-building initiatives, and supports the development of international space law.</p>
                 </div>
             </div>
-            <div className="w-full h-full items-center px-4 flex flex-col justify-center mb-8 md:mb-0">
+            <div className="w-full h-full items-center px-4 flex flex-col justify-center mb-8 lg:mb-0">
                 <h1 className="mono-label text-lg font-semibold mb-8">Background Guide</h1>
                 <iframe src="https://drive.google.com/file/d/1uMVlV_41NPIMUWJJFDMqvjsylvCCQRhK/preview" className="w-full min-w-[300px] max-w-[500px] h-full min-h-[700px]" />
 

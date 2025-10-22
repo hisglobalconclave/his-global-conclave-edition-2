@@ -5,9 +5,9 @@ import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 export default function Unhcr() {
     return (
-        <div className="relative h-full w-full flex flex-col md:flex-row md:justify-between items-center md:items-start p-10 z-10">
+        <div className="relative h-full w-full flex flex-col lg:flex-row lg:justify-between items-center lg:items-start p-10 z-10">
 
-            <div className="relative md:min-h-[650px] w-full max-w-[275px] items-center flex flex-col justify-between mx-10 mt-20 mb-8 md:mb-0">
+            <div className="relative lg:min-h-[650px] w-full max-w-[275px] items-center flex flex-col justify-between mx-10 mt-20 mb-8 lg:mb-0">
                 <ExpandableCard
                     title="UNHCR"
                     description="United Nations High Commissioner for Refugees"
@@ -25,7 +25,7 @@ export default function Unhcr() {
                     <p className="text-justify">The United Nations High Commissioner for Refugees (UNHCR) is a UN agency mandated to protect and support refugees at the request of a government or the UN itself. It aims to ensure that everyone can exercise the right to seek asylum and find safe refuge in another state, with the option to return home voluntarily, integrate locally, or resettle in a third country.</p>
                 </div>
             </div>
-            <div className="w-full h-full items-center px-4 flex flex-col justify-center mb-8 md:mb-0">
+            <div className="w-full h-full items-center px-4 flex flex-col justify-center mb-8 lg:mb-0">
                 <h1 className="mono-label text-lg font-semibold mb-8">Background Guide</h1>
                 <iframe src="https://drive.google.com/file/d/1uMVlV_41NPIMUWJJFDMqvjsylvCCQRhK/preview" className="w-full min-w-[300px] max-w-[500px] h-full min-h-[700px]" />
 
