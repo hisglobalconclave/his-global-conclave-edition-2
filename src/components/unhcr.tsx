@@ -43,19 +43,19 @@ export default function Unhcr() {
                     <ExpandableCard
                         name="Aparajith S"
                         title="Chairperson"
-                        description="Chairperson - UNHCR"
+                        description="Chairperson: UNHCR"
                         src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
                     />
                     <ExpandableCard
                         name="Nikitha"
                         title="Vice-Chairperson"
-                        description="Vice-Chairperson - UNHCR"
+                        description="Vice-Chairperson: UNHCR"
                         src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
                     />
                     <ExpandableCard
                         name="Rhashmitha R"
                         title="Vice-Chairperson"
-                        description="Vice-Chairperson - UNHCR"
+                        description="Vice-Chairperson: UNHCR"
                         src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
                     />
             </div>

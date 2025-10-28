@@ -43,19 +43,19 @@ export default function Unesco() {
                     <ExpandableCard
                         name="Varsha Shree V"
                         title="Chairperson"
-                        description="Chairperson - UNESCO"
+                        description="Chairperson: UNESCO"
                         src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
                     />
                     <ExpandableCard
                         name="Aishwarya Lakshmi M.B"
                         title="Vice-Chairperson"
-                        description="Vice-Chairperson - UNESCO"
+                        description="Vice-Chairperson: UNESCO"
                         src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
                     />
                     <ExpandableCard
                         name="Akshitha Prabha Pallapatti"
                         title="Vice-Chairperson"
-                        description="Vice-Chairperson - UNESCO"
+                        description="Vice-Chairperson: UNESCO"
                         src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
                     />
             </div>

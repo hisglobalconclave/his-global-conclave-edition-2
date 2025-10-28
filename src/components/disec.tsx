@@ -44,19 +44,19 @@ export default function Disec() {
                     <ExpandableCard
                         name="Abel Mathew Nibin"
                         title="Chairperson"
-                        description="Chairperson - DISEC"
+                        description="Chairperson: DISEC"
                         src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
                     />
                     <ExpandableCard
                         name="Akhil Gokul"
                         title="Vice-Chairperson"
-                        description="Vice-Chairperson - DISEC"
+                        description="Vice-Chairperson: DISEC"
                         src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
                     />
                     <ExpandableCard
                         name="Vaibhav S"
                         title="Vice-Chairperson"
-                        description="Vice-Chairperson - DISEC"
+                        description="Vice-Chairperson: DISEC"
                         src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
                     />
             </div>

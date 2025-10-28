@@ -43,19 +43,19 @@ export default function Unsc() {
                     <ExpandableCard
                         name="Alven Aloysius"
                         title="Chairperson"
-                        description="Chairperson - UNSC"
+                        description="Chairperson: UNSC"
                         src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
                     />
                     <ExpandableCard
                         name="Kishore E"
                         title="Vice-Chairperson"
-                        description="Vice-Chairperson - UNSC"
+                        description="Vice-Chairperson: UNSC"
                         src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
                     />
                     <ExpandableCard
                         name="Santhosh Bezaleel"
                         title="Vice-Chairperson"
-                        description="Vice-Chairperson - UNSC"
+                        description="Vice-Chairperson: UNSC"
                         src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
                     />
             </div>

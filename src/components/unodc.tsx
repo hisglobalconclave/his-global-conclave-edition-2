@@ -43,19 +43,19 @@ export default function Unodc() {
                     <ExpandableCard
                         name="Saketh CV"
                         title="Chairperson"
-                        description="Chairperson - UNODC"
+                        description="Chairperson: UNODC"
                         src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
                     />
                     <ExpandableCard
                         name="Rehan"
                         title="Vice-Chairperson"
-                        description="Vice-Chairperson - UNODC"
+                        description="Vice-Chairperson: UNODC"
                         src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
                     />
                     <ExpandableCard
                         name="Srinadhi U.S"
                         title="Vice-Chairperson"
-                        description="Vice-Chairperson - UNODC"
+                        description="Vice-Chairperson: UNODC"
                         src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
                     />
             </div>

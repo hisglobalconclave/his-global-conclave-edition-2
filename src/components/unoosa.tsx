@@ -43,19 +43,19 @@ export default function Unoosa() {
                     <ExpandableCard
                         name="Gautham Vanan"
                         title="Chairperson"
-                        description="Chairperson - UNOOSA"
+                        description="Chairperson: UNOOSA"
                         src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
                     />
                     <ExpandableCard
                         name="Keshav R"
                         title="Vice-Chairperson"
-                        description="Vice-Chairperson - UNOOSA"
+                        description="Vice-Chairperson: UNOOSA"
                         src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
                     />
                     <ExpandableCard
                         name="Vasumithra G.Y"
                         title="Vice-Chairperson"
-                        description="Vice-Chairperson - UNOOSA"
+                        description="Vice-Chairperson: UNOOSA"
                         src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
                     />
             </div>
