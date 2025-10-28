@@ -132,7 +132,7 @@ export default function MinimalHero() {
     window.addEventListener('scroll', onScroll);
 
     // Mobile committee icon animation
-    let mobileCommitteeIconAnimationDone = [false, false, false, false, false, false, false];
+    const mobileCommitteeIconAnimationDone = [false, false, false, false, false, false, false];
     function animateMobileIcons() {
         document.querySelectorAll<HTMLElement>('.mobile-committee-icon-animation').forEach((element, index) => {
             if (window.scrollY > ((window.innerHeight / 15) * (index == 1 || index == 6 ? index - 1: index)) && !mobileCommitteeIconAnimationDone[index] && !animationPlayed) {
