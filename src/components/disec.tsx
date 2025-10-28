@@ -18,7 +18,7 @@ export default function Disec() {
                     />
                     <h2 className="mono-label text-lg font-semibold mt-4">DISEC</h2>
                 </div>
-                <div className="mt-5 mb-5 md:mt-20 text-center md:text-left">
+                <div className="mt-5 mb-5 lg:mt-20 text-center md:text-left">
                     <h2 className="mono-label text-lg font-semibold mt-8 mb-4">Agenda</h2>
                     <p>
                     Topic 1:<br /> The Regulation of Autonomous Weapons Systems (AWS) <br /><br />

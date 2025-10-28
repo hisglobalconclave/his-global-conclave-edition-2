@@ -7,7 +7,7 @@ export default function Unesco() {
     return (
         <div className="relative h-full w-full flex flex-col lg:flex-row lg:justify-between items-center lg:items-start p-10 z-10">
 
-            <div className="relative lg:min-h-[650px] w-full max-w-[275px] items-center flex flex-col justify-between mx-10 mt-20 mb-8 lg:mb-0">
+            <div className="relative lg:min-h-[650px] w-full max-w-[275px] items-center flex flex-col justify-start mx-10 mt-20 mb-8 lg:mb-0">
                 <div className="flex flex-col items-center">
                     <Image
                         src="/his-global-conclave-edition-2/images/un_emblem.png"
@@ -17,7 +17,7 @@ export default function Unesco() {
                     />
                     <h2 className="mono-label text-lg font-semibold mt-4">UNESCO</h2>
                 </div>
-                <div className="mt-5 mb-5 md:mt-20 text-center md:text-left">
+                <div className="mt-5 mb-5 lg:mt-20 text-center md:text-left">
                     <h2 className="mono-label text-lg font-semibold mt-8 mb-4">Agenda</h2>
                     <p>
                     Topic 1:<br /> From Readiness Assessment to Enhanced Institutional, Technical, and Human Capacities on AI <br /><br />
