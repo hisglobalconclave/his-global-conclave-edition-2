@@ -41,40 +41,22 @@ export default function Unsc() {
             <div className="min-h-[650px] w-full max-w-[200px] items-center flex flex-col justify-between mx-10">
                 <h2 className="mono-label text-lg font-semibold mb-8">Executive Board</h2>
                     <ExpandableCard
-                        title="Chair"
-                        description="United Nations Security Council Committee"
+                        name="Alven Aloysius"
+                        title="Chairperson"
+                        description="Chairperson - UNSC"
                         src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
-                        ctaText="Visit"
-                        ctaLink="https://example.com"
-                        content={() => (
-                        <p>
-                            This is custom content. You can return JSX from a function or pass any React node.
-                        </p>
-                        )}
                     />
                     <ExpandableCard
-                        title="Vice-Chair"
-                        description="United Nations Security Council Committee"
+                        name="Kishore E"
+                        title="Vice-Chairperson"
+                        description="Vice-Chairperson - UNSC"
                         src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
-                        ctaText="Visit"
-                        ctaLink="https://example.com"
-                        content={() => (
-                        <p>
-                            This is custom content. You can return JSX from a function or pass any React node.
-                        </p>
-                        )}
                     />
                     <ExpandableCard
-                        title="Vice-Chair"
-                        description="United Nations Security Council Committee"
+                        name="Santhosh Bezaleel"
+                        title="Vice-Chairperson"
+                        description="Vice-Chairperson - UNSC"
                         src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
-                        ctaText="Visit"
-                        ctaLink="https://example.com"
-                        content={() => (
-                        <p>
-                            This is custom content. You can return JSX from a function or pass any React node.
-                        </p>
-                        )}
                     />
             </div>
         </div>

@@ -6,12 +6,10 @@ import { useOutsideClick } from "@hooks/use-outside-click";
 import Image from "next/image";
 
 export interface ExpandableCardProps {
+  name: string;
   title: string;
   description: string;
   src: string;
-  ctaText?: string;
-  ctaLink?: string;
-  content?: React.ReactNode | (() => React.ReactNode);
 }
 
 /**
@@ -19,12 +17,10 @@ export interface ExpandableCardProps {
  * Import and use this component in other pages by passing the props listed above.
  */
 export function ExpandableCard({
+  name,
   title,
   description,
   src,
-  ctaText = "Visit",
-  ctaLink = "#",
-  content = null,
 }: ExpandableCardProps) {
   const [active, setActive] = useState(false);
   const id = useId();
@@ -76,7 +72,7 @@ export function ExpandableCard({
             <motion.div
               layoutId={`card-${title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+              className="w-full max-w-[320px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
               <motion.div layoutId={`image-${title}-${id}`}>
                 <Image
@@ -84,18 +80,18 @@ export function ExpandableCard({
                   height={200}
                   src={src}
                   alt={title}
-                  className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+                  className="w-80 h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
                 />
               </motion.div>
 
               <div>
-                <div className="flex justify-between items-start p-4">
-                  <div className="">
+                <div className="flex justify-center items-center items-start p-4">
+                  <div className="flex justify-center items-center flex-col">
                     <motion.h3
-                      layoutId={`title-${title}-${id}`}
+                      layoutId={`name-${name}-${id}`}
                       className="font-medium text-neutral-700 dark:text-neutral-200 text-base"
                     >
-                      {title}
+                      {name}
                     </motion.h3>
                     <motion.p
                       layoutId={`description-${description}-${id}`}
@@ -104,30 +100,6 @@ export function ExpandableCard({
                       {description}
                     </motion.p>
                   </div>
-
-                  <motion.a
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    href={ctaLink}
-                    target="_blank"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
-                  >
-                    {ctaText}
-                  </motion.a>
-                </div>
-
-                <div className="pt-4 relative px-4">
-                  <motion.div
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
-                  >
-                    {typeof content === "function" ? content() : content}
-                  </motion.div>
                 </div>
               </div>
             </motion.div>
@@ -173,13 +145,11 @@ export function ExpandableCardDemo() {
       <ul className="w-full">
         {cards.map((card) => (
           <ExpandableCard
+            name="Lana Del Rey"
             key={card.title}
             title={card.title}
             description={card.description}
             src={card.src}
-            ctaText={card.ctaText}
-            ctaLink={card.ctaLink}
-            content={card.content}
           />
         ))}
       </ul>

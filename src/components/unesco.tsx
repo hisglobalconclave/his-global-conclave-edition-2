@@ -41,40 +41,22 @@ export default function Unesco() {
             <div className="min-h-[650px] w-full max-w-[200px] items-center flex flex-col justify-between mx-10">
                 <h2 className="mono-label text-lg font-semibold mb-8">Executive Board</h2>
                     <ExpandableCard
-                        title="Chair"
-                        description="United Nations Educational, Scientific and Cultural Organization Committee"
+                        name="Varsha Shree V"
+                        title="Chairperson"
+                        description="Chairperson - UNESCO"
                         src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
-                        ctaText="Visit"
-                        ctaLink="https://example.com"
-                        content={() => (
-                        <p>
-                            This is custom content. You can return JSX from a function or pass any React node.
-                        </p>
-                        )}
                     />
                     <ExpandableCard
-                        title="Vice-Chair"
-                        description="United Nations Educational, Scientific and Cultural Organization Committee"
+                        name="Aishwarya Lakshmi M.B"
+                        title="Vice-Chairperson"
+                        description="Vice-Chairperson - UNESCO"
                         src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
-                        ctaText="Visit"
-                        ctaLink="https://example.com"
-                        content={() => (
-                        <p>
-                            This is custom content. You can return JSX from a function or pass any React node.
-                        </p>
-                        )}
                     />
                     <ExpandableCard
-                        title="Vice-Chair"
-                        description="United Nations Educational, Scientific and Cultural Organization Committee"
+                        name="Akshitha Prabha Pallapatti"
+                        title="Vice-Chairperson"
+                        description="Vice-Chairperson - UNESCO"
                         src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
-                        ctaText="Visit"
-                        ctaLink="https://example.com"
-                        content={() => (
-                        <p>
-                            This is custom content. You can return JSX from a function or pass any React node.
-                        </p>
-                        )}
                     />
             </div>
         </div>
