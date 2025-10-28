@@ -24,8 +24,11 @@ const colors = {
 export default function MinimalHero() {
   const [page, setPage] = useState<'hero' | 'unesco' | 'unhcr' | 'unodc' | 'unsc' | 'unoosa' | 'disec' | 'ecosoc'>("hero");
   const [animationPlayed, setAnimationPlayed] = useState(false);
+  const [clickedOnce, setClickedOnce] = useState(false);
   const committeeLineWaitTime = animationPlayed ? 0 : 6000;
   const gradientRef = useRef<HTMLDivElement>(null);
+
+  
   
     useEffect(() => {
     // Only run the hero-specific DOM effects when the hero is visible
@@ -164,6 +167,62 @@ export default function MinimalHero() {
             });
         };
     }, [page, animationPlayed]);
+
+      // Ping animation for expandable card once clicked
+    useEffect(() => {
+        if (typeof document === 'undefined') return;
+
+        const expandableCards = document.querySelectorAll<HTMLElement>('.eb-unactive');
+        const handlers = new Map<HTMLElement, EventListener>();
+
+        if (!clickedOnce) {
+            expandableCards.forEach((card) => {
+                const ping = document.createElement('span');
+                ping.className = "ping absolute inline-flex top-[-3px] right-[-3px] size-3 animate-ping rounded-full bg-sky-400 opacity-75";
+                const dot = document.createElement('span');
+                dot.className = "dot absolute inline-flex top-[-3px] right-[-3px] size-3 rounded-full bg-sky-500";
+                card.appendChild(ping);
+                card.appendChild(dot);
+
+                const onClick = () => {
+                    setClickedOnce(true); // set clickedOnce to true on first user click
+                    // hide pings immediately after click
+                    ping.classList.add('hidden');
+                    dot.classList.add('hidden');
+                };
+                card.addEventListener('click', onClick);
+                handlers.set(card, onClick);
+            });
+        } else {
+            // hide any remaining pings/dots
+            expandableCards.forEach((card) => {
+                const ping = card.querySelector('.ping');
+                const dot = card.querySelector('.dot');
+                if (ping && dot && !ping.classList.contains('hidden') && !dot.classList.contains('hidden')) {
+                    ping.classList.add('hidden');
+                    dot.classList.add('hidden');
+                }
+                // still attach a click handler to ensure state remains true if clicked again
+                const onClick = () => setClickedOnce(true);
+                card.addEventListener('click', onClick);
+                handlers.set(card, onClick);
+            });
+        }
+
+        return () => {
+            // cleanup: remove inserted elements and event listeners
+            expandableCards.forEach((card) => {
+                const ping = card.querySelector('.ping');
+                const dot = card.querySelector('.dot');
+                if (ping) ping.remove();
+                if (dot) dot.remove();
+
+                const handler = handlers.get(card);
+                if (handler) card.removeEventListener('click', handler);
+            });
+            handlers.clear();
+        };
+    }, [clickedOnce, page]);
 
   return (
     <div className="font-primary relative min-h-screen w-full overflow-hidden bg-gradient-to-b md:bg-gradient-to-br from-[#1a1d18] via-black to-[#2a2e26] text-[#e6e1d7]">

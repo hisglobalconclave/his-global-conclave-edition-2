@@ -72,7 +72,7 @@ export function ExpandableCard({
             <motion.div
               layoutId={`card-${title}-${id}`}
               ref={ref}
-              className="w-full max-w-[320px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+              className="w-full max-w-[320px] h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden"
             >
               <motion.div layoutId={`image-${title}-${id}`}>
                 <Image
@@ -112,23 +112,23 @@ export function ExpandableCard({
         onClick={() => setActive(true)}
         className="p-4 flex flex-col  hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
       >
-        <div className="flex gap-4 flex-col max-w-[200px] w-full">
-          <motion.div layoutId={`image-${title}-${id}`}>
+        <div className="relative flex gap-4 flex-col max-w-[200px] w-full">          
+          <motion.div className="eb-unactive" layoutId={`image-${title}-${id}`}>
             <Image
               width={100}
               height={100}
               src={src}
               alt={title}
               className="h-[200px] w-[200px] rounded-lg object-cover object-top"
-            />
+            /> 
           </motion.div>
 
           <div className="flex justify-center items-center flex-col">
             <motion.h3
               layoutId={`title-${title}-${id}`}
-              className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left text-base"
+              className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left text-base flex"
             >
-              {title}
+              {title} 
             </motion.h3>
           </div>
         </div>
