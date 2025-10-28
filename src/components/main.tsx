@@ -37,7 +37,7 @@ export default function MinimalHero() {
 
         // If animation has played, make animated elements visible immediately
         if (animationPlayed) {
-            document.querySelectorAll<HTMLElement>('.word, .committee-icon, .committee-icon-animation, .custom-button, .highlighted-text, .icons').forEach((element) => {
+            document.querySelectorAll<HTMLElement>('.word, .committee-icon, .committee-icon-animation, .custom-button, .highlighted-text, .icons, .mobile-committee-icon-animation').forEach((element) => {
                 element.style.opacity = '1';
             });
         }
@@ -131,12 +131,32 @@ export default function MinimalHero() {
     }
     window.addEventListener('scroll', onScroll);
 
+    // Mobile committee icon animation
+    let mobileCommitteeIconAnimationDone = [false, false, false, false, false, false, false];
+    function animateMobileIcons() {
+        document.querySelectorAll<HTMLElement>('.mobile-committee-icon-animation').forEach((element, index) => {
+            if (window.scrollY > ((window.innerHeight / 15) * (index == 1 || index == 6 ? index - 1: index)) && !mobileCommitteeIconAnimationDone[index] && !animationPlayed) {
+                console.log(window.scrollY, index);
+                const delay = parseInt(element.getAttribute('data-delay') || '0', 10);
+                setTimeout(() => {
+                    element.style.animation = 'word-appear 0.8s ease-out forwards';
+                    setTimeout(() => {
+                        element.style.opacity = '1';
+                        element.style.animation = 'none';
+                    }, 1000);
+                }, delay);
+                mobileCommitteeIconAnimationDone[index] = true;
+            }
+        });
+    }
+    window.addEventListener('scroll', animateMobileIcons);
         return () => {
             // clear any scheduled animation timeouts to avoid them firing after unmount
             document.removeEventListener('mousemove', onMouseMove);
             document.removeEventListener('mouseleave', onMouseLeave);
             document.removeEventListener('click', onClick);
             window.removeEventListener('scroll', onScroll);
+            window.removeEventListener('scroll', animateMobileIcons);
             document.querySelectorAll<HTMLElement>('.committee-icon').forEach((icon) => {
                 icon.removeEventListener('click', () => {
                     setAnimationPlayed(true);
@@ -598,7 +618,7 @@ export default function MinimalHero() {
           <div className='flex flex-col justify-between min-h-screen md:hidden'>
             {/* Top Side Committee Icons */}
             <div className='flex justify-between m-10 items-center'>
-                <button onClick={() => { setPage('unesco'); window.scrollTo({top: 0, left: 0, behavior: 'smooth',}); }} className="committee-icon-animation relative flex items-center group" data-delay="4100">
+                <button onClick={() => { setPage('unesco'); window.scrollTo({top: 0, left: 0, behavior: 'smooth',}); }} className="mobile-committee-icon-animation relative flex items-center group" data-delay="300">
                     {/* Committee icon */}
                     <Image
                         width={64} height={64}
@@ -610,7 +630,7 @@ export default function MinimalHero() {
                     />
                     <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNESCO</span>
                 </button>
-                <button onClick={() => { setPage('unhcr'); window.scrollTo({top: 0, left: 0, behavior: 'smooth',}); }} className="committee-icon-animation relative flex items-center group" data-delay="3800">
+                <button onClick={() => { setPage('unhcr'); window.scrollTo({top: 0, left: 0, behavior: 'smooth',}); }} className="mobile-committee-icon-animation relative flex items-center group" data-delay="600">
                     {/* Committee icon */}
                     <Image
                         width={64} height={64}
@@ -626,7 +646,7 @@ export default function MinimalHero() {
             {/* Center Side Committee Icons */}
             <div className='flex flex-col items-center'>
 
-                <button onClick={() => { setPage('unoosa'); window.scrollTo({top: 0, left: 0, behavior: 'smooth',}); }} className="committee-icon-animation relative flex items-center group" data-delay="4500">
+                <button onClick={() => { setPage('unoosa'); window.scrollTo({top: 0, left: 0, behavior: 'smooth',}); }} className="mobile-committee-icon-animation relative flex items-center group" data-delay="900">
                     {/* Committee icon */}
                     <Image
                         width={64} height={64}
@@ -638,7 +658,7 @@ export default function MinimalHero() {
                     <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNOOSA</span>
                 </button>
 
-                <button onClick={() => { setPage('disec'); window.scrollTo({top: 0, left: 0, behavior: 'smooth',}); }} className="committee-icon-animation relative flex items-center group my-[30%]" data-delay="4800">
+                <button onClick={() => { setPage('disec'); window.scrollTo({top: 0, left: 0, behavior: 'smooth',}); }} className="mobile-committee-icon-animation relative flex items-center group my-[30%]" data-delay="1200">
                     {/* Committee icon */}
                     <Image
                         width={64} height={64}
@@ -650,7 +670,7 @@ export default function MinimalHero() {
                     <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>DISEC</span>
                 </button>
 
-                <button onClick={() => { setPage('ecosoc'); window.scrollTo({top: 0, left: 0, behavior: 'smooth',}); }} className="committee-icon-animation relative flex items-center group" data-delay="5100">
+                <button onClick={() => { setPage('ecosoc'); window.scrollTo({top: 0, left: 0, behavior: 'smooth',}); }} className="mobile-committee-icon-animation relative flex items-center group" data-delay="1500">
                     {/* Committee icon */}
                     <Image
                         width={64} height={64}
@@ -665,7 +685,7 @@ export default function MinimalHero() {
 
             {/* Bottom Side Committee Icons */}
             <div className="flex justify-between m-10 mb-30 items-center">
-                <button onClick={() => { setPage('unodc'); window.scrollTo({top: 0, left: 0, behavior: 'smooth',}); }} className="committee-icon-animation relative flex items-center group" data-delay="5400">
+                <button onClick={() => { setPage('unodc'); window.scrollTo({top: 0, left: 0, behavior: 'smooth',}); }} className="mobile-committee-icon-animation relative flex items-center group" data-delay="1800">
                     {/* Committee icon */}
                     <Image
                         width={64} height={64}
@@ -676,7 +696,7 @@ export default function MinimalHero() {
                     />
                     <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNODC</span>
                 </button>
-                <button onClick={() => { setPage('unsc'); window.scrollTo({top: 0, left: 0, behavior: 'smooth',}); }} className="committee-icon-animation relative flex items-center group" data-delay="5700">
+                <button onClick={() => { setPage('unsc'); window.scrollTo({top: 0, left: 0, behavior: 'smooth',}); }} className="mobile-committee-icon-animation relative flex items-center group" data-delay="2100">
                     {/* Committee icon */}
                     <Image
                         width={64} height={64}
