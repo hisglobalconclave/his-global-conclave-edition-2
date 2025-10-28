@@ -166,7 +166,7 @@ export default function MinimalHero() {
     }, [page, animationPlayed]);
 
   return (
-    <div className="font-primary relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-[#1a1d18] via-black to-[#2a2e26] text-[#e6e1d7]">
+    <div className="font-primary relative min-h-screen w-full overflow-hidden bg-gradient-to-b md:bg-gradient-to-br from-[#1a1d18] via-black to-[#2a2e26] text-[#e6e1d7]">
       {page === 'hero' ? (
         /* Hero Page */
         <>
