@@ -1,28 +1,28 @@
 'use client';
 import { ExpandableCard} from "./ui/expandable-card";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
-  
+import Image from 'next/image';
 
 export default function Unhcr() {
     return (
         <div className="relative h-full w-full flex flex-col lg:flex-row lg:justify-between items-center lg:items-start p-10 z-10">
 
             <div className="relative lg:min-h-[650px] w-full max-w-[275px] items-center flex flex-col justify-between mx-10 mt-20 mb-8 lg:mb-0">
-                <ExpandableCard
-                    title="UNHCR"
-                    description="United Nations High Commissioner for Refugees"
-                    src="/his-global-conclave-edition-2/images/un_emblem.png"
-                    ctaText="Visit"
-                    ctaLink="https://example.com"
-                    content={() => (
+                <div className="flex flex-col items-center">
+                    <Image
+                        src="/his-global-conclave-edition-2/images/un_emblem.png"
+                        alt="UN Emblem"
+                        width={200}
+                        height={200}
+                    />
+                    <h2 className="mono-label text-lg font-semibold mt-4">UNHCR</h2>
+                </div>
+                <div className="mt-5 mb-5 md:mt-20 text-center md:text-left">
+                    <h2 className="mono-label text-lg font-semibold mt-8 mb-4">Agenda</h2>
                     <p>
-                        This is custom content. You can return JSX from a function or pass any React node.
+                    Topic 1:<br /> Strategies to enhance refugees’ employment, shelter, safety, education, and social integration. <br /><br />
+                    Topic 2:<br /> Strategies to prevent refugee involvement in crime and exploitation through protection and livelihood opportunities.
                     </p>
-                    )}/>
-
-                <div>
-                    <h2 className="mono-label text-lg font-semibold mt-8 mb-4">About UNHCR</h2>
-                    <p className="text-justify">The United Nations High Commissioner for Refugees (UNHCR) is a UN agency mandated to protect and support refugees at the request of a government or the UN itself. It aims to ensure that everyone can exercise the right to seek asylum and find safe refuge in another state, with the option to return home voluntarily, integrate locally, or resettle in a third country.</p>
                 </div>
             </div>
             <div className="w-full h-full items-center px-4 flex flex-col justify-center mb-8 lg:mb-0">

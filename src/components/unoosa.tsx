@@ -1,28 +1,28 @@
 'use client';
 import { ExpandableCard} from "./ui/expandable-card";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
-  
+import Image from 'next/image';
 
 export default function Unoosa() {
     return (
         <div className="relative h-full w-full flex flex-col lg:flex-row lg:justify-between items-center lg:items-start p-10 z-10">
 
             <div className="relative lg:min-h-[650px] w-full max-w-[275px] items-center flex flex-col justify-between mx-10 mt-20 mb-8 lg:mb-0">
-                <ExpandableCard
-                    title="UNOOSA"
-                    description="United Nations Office for Outer Space Affairs"
-                    src="/his-global-conclave-edition-2/images/un_emblem.png"
-                    ctaText="Visit"
-                    ctaLink="https://example.com"
-                    content={() => (
+                <div className="flex flex-col items-center">
+                    <Image
+                        src="/his-global-conclave-edition-2/images/un_emblem.png"
+                        alt="UN Emblem"
+                        width={200}
+                        height={200}
+                    />
+                    <h2 className="mono-label text-lg font-semibold mt-4">UNOOSA</h2>
+                </div>
+                <div className="mt-5 mb-5 md:mt-20 text-center md:text-left">
+                    <h2 className="mono-label text-lg font-semibold mt-8 mb-4">Agenda</h2>
                     <p>
-                        This is custom content. You can return JSX from a function or pass any React node.
+                    Topic 1:<br /> The Approach to Manned Space Missions to Mars <br /><br />
+                    Topic 2:<br /> The Militarization of Space – Threats and Opportunities
                     </p>
-                    )}/>
-
-                <div>
-                    <h2 className="mono-label text-lg font-semibold mt-8 mb-4">About UNOOSA</h2>
-                    <p className="text-justify">The United Nations Office for Outer Space Affairs (UNOOSA) is a UN office that promotes international cooperation in the peaceful use and exploration of outer space. It provides a platform for dialogue and collaboration among member states, facilitates capacity-building initiatives, and supports the development of international space law.</p>
                 </div>
             </div>
             <div className="w-full h-full items-center px-4 flex flex-col justify-center mb-8 lg:mb-0">

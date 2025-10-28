@@ -1,28 +1,28 @@
 'use client';
 import { ExpandableCard} from "./ui/expandable-card";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
-  
+import Image from 'next/image';
 
 export default function Unsc() {
     return (
         <div className="relative h-full w-full flex flex-col lg:flex-row lg:justify-between items-center lg:items-start p-10 z-10">
 
             <div className="relative lg:min-h-[650px] w-full max-w-[275px] items-center flex flex-col justify-between mx-10 mt-20 mb-8 lg:mb-0">
-                <ExpandableCard
-                    title="UNSC"
-                    description="United Nations Security Council"
-                    src="/his-global-conclave-edition-2/images/un_emblem.png"
-                    ctaText="Visit"
-                    ctaLink="https://example.com"
-                    content={() => (
+                <div className="flex flex-col items-center">
+                    <Image
+                        src="/his-global-conclave-edition-2/images/un_emblem.png"
+                        alt="UN Emblem"
+                        width={200}
+                        height={200}
+                    />
+                    <h2 className="mono-label text-lg font-semibold mt-4">UNSC</h2>
+                </div>
+                <div className="mt-5 mb-5 md:mt-20 text-center md:text-left">
+                    <h2 className="mono-label text-lg font-semibold mt-8 mb-4">Agenda</h2>
                     <p>
-                        This is custom content. You can return JSX from a function or pass any React node.
+                    Topic 1:<br /> Regulation of Autonomous Weapons and Artificial Intelligence in Warfare <br /><br />
+                    Topic 2:<br /> Resolution of the Ongoing Conflict and Humanitarian Crisis in Ukraine
                     </p>
-                    )}/>
-
-                <div>
-                    <h2 className="mono-label text-lg font-semibold mt-8 mb-4">About UNSC</h2>
-                    <p className="text-justify">The United Nations Security Council (UNSC) is one of the six principal organs of the United Nations, responsible for maintaining international peace and security. It has the power to make decisions that member states are obligated to implement under the UN Charter. The UNSC can impose sanctions, authorize the use of force, and establish peacekeeping operations.</p>
                 </div>
             </div>
             <div className="w-full h-full items-center px-4 flex flex-col justify-center mb-8 lg:mb-0">
