@@ -55,6 +55,10 @@ export default function MinimalHero() {
                     const delay = parseInt(element.getAttribute('data-delay') || '0', 10);
                     setTimeout(() => {
                         element.style.animation = 'word-appear 0.8s ease-out forwards';
+                        setTimeout(() => {
+                            element.style.opacity = '1';
+                            element.style.animation = 'none';
+                        }, 1000);
                     }, delay);
                 });
 
