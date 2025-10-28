@@ -308,7 +308,7 @@ export default function MinimalHero() {
                         </button>
 
                         {/* UNHCR */}
-                        <button onClick={() => setPage('unhcr')}
+                        <button onClick={() => { setPage('unhcr') }}
                             className="committee-icon-animation relative flex items-center group mt-30"
                             data-delay="3700"
                             ref={el => {
@@ -598,7 +598,7 @@ export default function MinimalHero() {
           <div className='flex flex-col justify-between min-h-screen md:hidden'>
             {/* Top Side Committee Icons */}
             <div className='flex justify-between m-10 items-center'>
-                <button onClick={() => setPage('unesco')} className="committee-icon-animation relative flex items-center group" data-delay="4100">
+                <button onClick={() => { setPage('unesco'); window.scrollTo({top: 0, left: 0, behavior: 'smooth',}); }} className="committee-icon-animation relative flex items-center group" data-delay="4100">
                     {/* Committee icon */}
                     <Image
                         width={64} height={64}
@@ -610,7 +610,7 @@ export default function MinimalHero() {
                     />
                     <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNESCO</span>
                 </button>
-                <button onClick={() => setPage('unhcr')} className="committee-icon-animation relative flex items-center group" data-delay="3800">
+                <button onClick={() => { setPage('unhcr'); window.scrollTo({top: 0, left: 0, behavior: 'smooth',}); }} className="committee-icon-animation relative flex items-center group" data-delay="3800">
                     {/* Committee icon */}
                     <Image
                         width={64} height={64}
@@ -626,7 +626,7 @@ export default function MinimalHero() {
             {/* Center Side Committee Icons */}
             <div className='flex flex-col items-center'>
 
-                <button onClick={() => setPage('unoosa')} className="committee-icon-animation relative flex items-center group" data-delay="4500">
+                <button onClick={() => { setPage('unoosa'); window.scrollTo({top: 0, left: 0, behavior: 'smooth',}); }} className="committee-icon-animation relative flex items-center group" data-delay="4500">
                     {/* Committee icon */}
                     <Image
                         width={64} height={64}
@@ -638,7 +638,7 @@ export default function MinimalHero() {
                     <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNOOSA</span>
                 </button>
 
-                <button onClick={() => setPage('disec')} className="committee-icon-animation relative flex items-center group my-[30%]" data-delay="4800">
+                <button onClick={() => { setPage('disec'); window.scrollTo({top: 0, left: 0, behavior: 'smooth',}); }} className="committee-icon-animation relative flex items-center group my-[30%]" data-delay="4800">
                     {/* Committee icon */}
                     <Image
                         width={64} height={64}
@@ -650,7 +650,7 @@ export default function MinimalHero() {
                     <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>DISEC</span>
                 </button>
 
-                <button onClick={() => setPage('ecosoc')} className="committee-icon-animation relative flex items-center group" data-delay="5100">
+                <button onClick={() => { setPage('ecosoc'); window.scrollTo({top: 0, left: 0, behavior: 'smooth',}); }} className="committee-icon-animation relative flex items-center group" data-delay="5100">
                     {/* Committee icon */}
                     <Image
                         width={64} height={64}
@@ -665,7 +665,7 @@ export default function MinimalHero() {
 
             {/* Bottom Side Committee Icons */}
             <div className="flex justify-between m-10 mb-30 items-center">
-                <button onClick={() => setPage('unodc')} className="committee-icon-animation relative flex items-center group" data-delay="5400">
+                <button onClick={() => { setPage('unodc'); window.scrollTo({top: 0, left: 0, behavior: 'smooth',}); }} className="committee-icon-animation relative flex items-center group" data-delay="5400">
                     {/* Committee icon */}
                     <Image
                         width={64} height={64}
@@ -676,7 +676,7 @@ export default function MinimalHero() {
                     />
                     <span className='mono-label absolute bottom-0 left-1/2 translate -translate-x-1/2 translate-y-8'>UNODC</span>
                 </button>
-                <button onClick={() => setPage('unsc')} className="committee-icon-animation relative flex items-center group" data-delay="5700">
+                <button onClick={() => { setPage('unsc'); window.scrollTo({top: 0, left: 0, behavior: 'smooth',}); }} className="committee-icon-animation relative flex items-center group" data-delay="5700">
                     {/* Committee icon */}
                     <Image
                         width={64} height={64}
