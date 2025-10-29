@@ -15,7 +15,7 @@ export default function Unesco() {
                         width={200}
                         height={200}
                     />
-                    <h2 className="mono-label text-lg font-semibold mt-4">UNESCO</h2>
+                    <h2 className="mono-label text-lg font-semibold mt-4">UNESCO - GFEAI</h2>
                 </div>
                 <div className="mt-5 mb-5 lg:mt-20 text-center md:text-left">
                     <h2 className="mono-label text-lg font-semibold mt-8 mb-4">Agenda</h2>
@@ -43,20 +43,20 @@ export default function Unesco() {
                     <ExpandableCard
                         name="Varsha Shree V"
                         title="Chairperson"
-                        description="Chairperson: UNESCO"
+                        description="Chairperson: UNESCO - GFEAI"
                         src="/his-global-conclave-edition-2/images/team_members/unesco-chair.webp"
                     />
                     <ExpandableCard
                         name="Aishwarya Lakshmi M.B"
                         title="Vice-Chairperson"
-                        description="Vice-Chairperson: UNESCO"
+                        description="Vice-Chairperson: UNESCO - GFEAI"
                         src="/his-global-conclave-edition-2/images/team_members/unesco-vice-chair-p1.webp"
                     />
                     <ExpandableCard
                         name="Akshitha Prabha Pallapatti"
                         title="Vice-Chairperson"
-                        description="Vice-Chairperson: UNESCO"
-                        src="/his-global-conclave-edition-2/images/team_members/unesco-vice-chair-p2.jpg"
+                        description="Vice-Chairperson: UNESCO - GFEAI"
+                        src="/his-global-conclave-edition-2/images/team_members/unesco-vice-chair-p2.webp"
                     />
             </div>
         </div>

@@ -51,7 +51,7 @@ export default function Disec() {
                         name="Akhil Gokul"
                         title="Vice-Chairperson"
                         description="Vice-Chairperson: DISEC"
-                        src="/his-global-conclave-edition-2/images/team_members/disec-vice-chair-p1.jpg"
+                        src="/his-global-conclave-edition-2/images/team_members/disec-vice-chair-p1.webp"
                     />
                     <ExpandableCard
                         name="Vaibhav S"

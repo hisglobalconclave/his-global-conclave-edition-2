@@ -56,7 +56,7 @@ export default function Unhcr() {
                         name="Rhashmitha R"
                         title="Vice-Chairperson"
                         description="Vice-Chairperson: UNHCR"
-                        src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
+                        src="/his-global-conclave-edition-2/images/team_members/unhcr-vice-chair-p2.webp"
                     />
             </div>
         </div>

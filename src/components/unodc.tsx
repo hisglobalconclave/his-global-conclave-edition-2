@@ -50,7 +50,7 @@ export default function Unodc() {
                         name="Rehan"
                         title="Vice-Chairperson"
                         description="Vice-Chairperson: UNODC"
-                        src="/his-global-conclave-edition-2/images/team_members/unodc-vice-chair-p1.jpg"
+                        src="/his-global-conclave-edition-2/images/team_members/unodc-vice-chair-p1.webp"
                     />
                     <ExpandableCard
                         name="Srinadhi U.S"
