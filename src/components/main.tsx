@@ -613,10 +613,11 @@ export default function MinimalHero() {
                 </div>
 
                 {/* Bottom tagline */}
-                <div className="text-center">
+                <div>
                     <div
-                        className="mb-4 h-px w-16 opacity-30"
+                        className="word mb-4 h-px w-16 opacity-30"
                         style={{background: `linear-gradient(to right, transparent, ${colors[200]}, transparent)`}}
+                        data-delay="2600"
                     ></div>
                     <h2
                         className="font-mono text-xs font-light tracking-[0.2em] uppercase opacity-80 md:text-sm lg:text-base 2xl:text-lg 3xl:text-xl 4xl:text-2xl"
@@ -821,8 +822,6 @@ export default function MinimalHero() {
           <div className="floating-element" style={{ top: '60%', left: '85%', animationDelay: '5.5s' }} />
           <div className="floating-element" style={{ top: '40%', left: '10%', animationDelay: '6s' }} />
           <div className="floating-element" style={{ top: '75%', left: '90%', animationDelay: '6.5s' }} />
-
-          <Logo />
 
           <button
             className="mono-label absolute top-8 left-8 border border-[#e6e1d7] px-2 py-2 rounded hover:bg-[#e6e1d7] hover:text-black transition-colors z-50"

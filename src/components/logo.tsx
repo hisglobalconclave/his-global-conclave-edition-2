@@ -36,10 +36,11 @@ export default function Logo() {
             </div>
           </div>
             <div
-                className="mt-4 h-px w-16 opacity-30 absolute left-1/2 transform -translate-x-1/2"
+                className="word mt-4 h-px w-16 opacity-30 absolute left-1/2 transform -translate-x-1/2"
                 style={{
                 background: `linear-gradient(to right, transparent, #c8b4a0, transparent)`,
                 }}
+                data-delay="1200"
             >
             </div>
           
