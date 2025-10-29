@@ -44,13 +44,13 @@ export default function Unoosa() {
                         name="Gautham Vanan"
                         title="Chairperson"
                         description="Chairperson: UNOOSA"
-                        src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
+                        src="/his-global-conclave-edition-2/images/team_members/unoosa-chair.webp"
                     />
                     <ExpandableCard
-                        name="Keshav R"
+                        name="Keshav Rajesh"
                         title="Vice-Chairperson"
                         description="Vice-Chairperson: UNOOSA"
-                        src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
+                        src="/his-global-conclave-edition-2/images/team_members/unoosa-vice-chair-p1.webp"
                     />
                     <ExpandableCard
                         name="Vasumithra G.Y"

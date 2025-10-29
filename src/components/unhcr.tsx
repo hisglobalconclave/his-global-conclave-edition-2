@@ -41,16 +41,16 @@ export default function Unhcr() {
             <div className="min-h-[650px] w-full max-w-[200px] items-center flex flex-col justify-between mx-10">
                 <h2 className="mono-label text-lg font-semibold mb-8">Executive Board</h2>
                     <ExpandableCard
-                        name="Aparajith S"
+                        name="Aparajith.S"
                         title="Chairperson"
                         description="Chairperson: UNHCR"
-                        src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
+                        src="/his-global-conclave-edition-2/images/team_members/unhcr-chair.webp"
                     />
                     <ExpandableCard
                         name="Nikitha"
                         title="Vice-Chairperson"
                         description="Vice-Chairperson: UNHCR"
-                        src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
+                        src="/his-global-conclave-edition-2/images/team_members/unhcr-vice-chair-p1.webp"
                     />
                     <ExpandableCard
                         name="Rhashmitha R"

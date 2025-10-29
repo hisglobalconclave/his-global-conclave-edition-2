@@ -44,19 +44,19 @@ export default function Ecosoc() {
                         name="Sivakeerthana M"
                         title="Chairperson"
                         description="Chairperson: ECOSOC"
-                        src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
+                        src="/his-global-conclave-edition-2/images/team_members/ecosoc-chair.webp"
                     />
                     <ExpandableCard
                         name="Bhuvanaesh R"
                         title="Vice-Chairperson"
                         description="Vice-Chairperson: ECOSOC"
-                        src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
+                        src="/his-global-conclave-edition-2/images/team_members/ecosoc-vice-chair-p1.webp"
                     />
                     <ExpandableCard
                         name="Akshaya Nidhi OG"
                         title="Vice-Chairperson"
                         description="Vice-Chairperson: ECOSOC"
-                        src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
+                        src="/his-global-conclave-edition-2/images/team_members/ecosoc-vice-chair-p2.jpg"
                     />
             </div>
         </div>

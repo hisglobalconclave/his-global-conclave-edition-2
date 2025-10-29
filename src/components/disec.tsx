@@ -45,13 +45,13 @@ export default function Disec() {
                         name="Abel Mathew Nibin"
                         title="Chairperson"
                         description="Chairperson: DISEC"
-                        src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
+                        src="/his-global-conclave-edition-2/images/team_members/disec-chair.webp"
                     />
                     <ExpandableCard
                         name="Akhil Gokul"
                         title="Vice-Chairperson"
                         description="Vice-Chairperson: DISEC"
-                        src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
+                        src="/his-global-conclave-edition-2/images/team_members/disec-vice-chair-p1.jpg"
                     />
                     <ExpandableCard
                         name="Vaibhav S"
