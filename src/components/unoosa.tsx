@@ -56,7 +56,7 @@ export default function Unoosa() {
                         name="Vasumithra G.Y"
                         title="Vice-Chairperson"
                         description="Vice-Chairperson: UNOOSA"
-                        src="/his-global-conclave-edition-2/images/team_members/bhuvanaesh_r.jpg"
+                        src="/his-global-conclave-edition-2/images/team_members/unoosa-vice-chair-p2.webp"
                     />
             </div>
         </div>
