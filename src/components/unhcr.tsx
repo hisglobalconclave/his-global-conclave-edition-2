@@ -27,15 +27,16 @@ export default function Unhcr() {
             </div>
             <div className="w-full h-full items-center px-4 flex flex-col justify-center mb-8 lg:mb-0">
                 <h1 className="mono-label text-lg font-semibold mb-8">Background Guide</h1>
-                <iframe src="https://drive.google.com/file/d/1uMVlV_41NPIMUWJJFDMqvjsylvCCQRhK/preview" className="w-full min-w-[300px] max-w-[500px] h-full min-h-[700px]" />
+                <iframe src="https://drive.google.com/file/d/1Pi2Xi24mT_3yUTEgeADNNrsGQ78IOqld/preview" className="w-full min-w-[300px] max-w-[500px] h-full min-h-[700px]" />
 
                 <div className="flex justify-center text-center mt-10">
+                    <a href="/his-global-conclave-edition-2/bg-guide/UNHCR-BG-V2.pdf" download>
                     <HoverBorderGradient
                         className="mono-label text-sm 2xl:text-xl"
-                        onClick={() => window.open("https://forms.gle/Vcmu4Wq2qEURGejk6", "_blank")}
                     >
                         <span style={{ whiteSpace: 'nowrap' }}>Download Background Guide</span>
                     </HoverBorderGradient>
+                    </a>
                 </div>
             </div>
             <div className="min-h-[650px] w-full max-w-[200px] items-center flex flex-col justify-between mx-10">

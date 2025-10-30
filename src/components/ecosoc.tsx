@@ -33,7 +33,6 @@ export default function Ecosoc() {
                     <a href="/his-global-conclave-edition-2/bg-guide/ECOSOC-BG-V3.pdf" download>
                     <HoverBorderGradient
                         className="mono-label text-sm 2xl:text-xl"
-                        onClick={() => window.open("https://forms.gle/Vcmu4Wq2qEURGejk6", "_blank")}
                     >
                         <span style={{ whiteSpace: 'nowrap' }}>Download Background Guide</span>
                     </HoverBorderGradient>

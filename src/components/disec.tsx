@@ -32,11 +32,8 @@ export default function Disec() {
 
                 <div className="flex justify-center text-center mt-10">
                     <a href="/his-global-conclave-edition-2/bg-guide/DISEC-BG-V3.pdf" download>
-                    <HoverBorderGradient
-                        className="mono-label text-sm 2xl:text-xl"
-                        onClick={() => window.open("https://forms.gle/Vcmu4Wq2qEURGejk6", "_blank")}
-                    >
-                        <span style={{ whiteSpace: 'nowrap' }}>Download Background Guide</span>
+                    <HoverBorderGradient className="mono-label text-sm 2xl:text-xl">
+                        <span style={{ whiteSpace: 'nowrap', cursor: 'pointer' }}>Download Background Guide</span>
                     </HoverBorderGradient>
                     </a>
                 </div>
