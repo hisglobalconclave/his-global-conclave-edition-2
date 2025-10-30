@@ -53,7 +53,7 @@ export default function Unesco() {
                         src="/his-global-conclave-edition-2/images/team_members/unesco-vice-chair-p1.webp"
                     />
                     <ExpandableCard
-                        name="Akshitha Prabha Pallapatti"
+                        name="Akshitha Prabha Pallapati"
                         title="Vice-Chairperson"
                         description="Vice-Chairperson: UNESCO - GFEAI"
                         src="/his-global-conclave-edition-2/images/team_members/unesco-vice-chair-p2.webp"
