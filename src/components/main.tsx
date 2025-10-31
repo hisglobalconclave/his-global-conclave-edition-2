@@ -378,7 +378,7 @@ export default function MinimalHero() {
                             <Image
                                 width={72} height={72}
                                 className="committee-icon"
-                                src="/his-global-conclave-edition-2/images/un_emblem.png"
+                                src="/images/un_emblem.png"
                                 alt="unesco-icon"
                                 style={{ zIndex: 2 }}
                                 
@@ -421,7 +421,7 @@ export default function MinimalHero() {
                             <Image
                                 width={72} height={72}
                                 className="committee-icon"
-                                src="/his-global-conclave-edition-2/images/un_emblem.png"
+                                src="/images/un_emblem.png"
                                 alt="unhcr-icon"
                                 style={{ zIndex: 2 }}
                             />
@@ -466,7 +466,7 @@ export default function MinimalHero() {
                             <Image
                                 width={72} height={72}
                                 className="committee-icon"
-                                src="/his-global-conclave-edition-2/images/un_emblem.png"
+                                src="/images/un_emblem.png"
                                 alt="unoosa-icon"
                                 style={{ zIndex: 2 }}
                             />
@@ -478,7 +478,7 @@ export default function MinimalHero() {
                             <Image
                                 width={72} height={72}
                                 className="committee-icon"
-                                src="/his-global-conclave-edition-2/images/un_emblem.png"
+                                src="/images/un_emblem.png"
                                 alt="disec-icon"
                                 style={{ zIndex: 2 }}
                             />
@@ -519,7 +519,7 @@ export default function MinimalHero() {
                             <Image
                                 width={72} height={72}
                                 className="committee-icon"
-                                src="/his-global-conclave-edition-2/images/un_emblem.png"
+                                src="/images/un_emblem.png"
                                 alt="cgsd-icon"
                                 style={{ zIndex: 2 }}
                             />
@@ -563,7 +563,7 @@ export default function MinimalHero() {
                             <Image
                                 width={72} height={72}
                                 className="committee-icon"
-                                src="/his-global-conclave-edition-2/images/un_emblem.png"
+                                src="/images/un_emblem.png"
                                 alt="unodc-icon"
                                 style={{ zIndex: 2 }}
                             />
@@ -603,7 +603,7 @@ export default function MinimalHero() {
                             <Image
                                 width={72} height={72}
                                 className="committee-icon"
-                                src="/his-global-conclave-edition-2/images/un_emblem.png"
+                                src="/images/un_emblem.png"
                                 alt="unsc-icon"
                                 style={{ zIndex: 2 }}
                             />
@@ -683,7 +683,7 @@ export default function MinimalHero() {
                     <Image
                         width={64} height={64}
                         className="committee-icon"
-                        src="/his-global-conclave-edition-2/images/un_emblem.png"
+                        src="/images/un_emblem.png"
                         alt=""
                         style={{ zIndex: 2 }}
                         
@@ -695,7 +695,7 @@ export default function MinimalHero() {
                     <Image
                         width={64} height={64}
                         className="committee-icon"
-                        src="/his-global-conclave-edition-2/images/un_emblem.png"
+                        src="/images/un_emblem.png"
                         alt=""
                         style={{ zIndex: 2 }}
                     />
@@ -711,7 +711,7 @@ export default function MinimalHero() {
                     <Image
                         width={64} height={64}
                         className="committee-icon"
-                        src="/his-global-conclave-edition-2/images/un_emblem.png"
+                        src="/images/un_emblem.png"
                         alt=""
                         style={{ zIndex: 2 }}
                     />
@@ -723,7 +723,7 @@ export default function MinimalHero() {
                     <Image
                         width={64} height={64}
                         className="committee-icon"
-                        src="/his-global-conclave-edition-2/images/un_emblem.png"
+                        src="/images/un_emblem.png"
                         alt=""
                         style={{ zIndex: 2 }}
                     />
@@ -735,7 +735,7 @@ export default function MinimalHero() {
                     <Image
                         width={64} height={64}
                         className="committee-icon"
-                        src="/his-global-conclave-edition-2/images/un_emblem.png"
+                        src="/images/un_emblem.png"
                         alt=""
                         style={{ zIndex: 2 }}
                     />
@@ -750,7 +750,7 @@ export default function MinimalHero() {
                     <Image
                         width={64} height={64}
                         className="committee-icon"
-                        src="/his-global-conclave-edition-2/images/un_emblem.png"
+                        src="/images/un_emblem.png"
                         alt=""
                         style={{ zIndex: 2 }}
                     />
@@ -761,7 +761,7 @@ export default function MinimalHero() {
                     <Image
                         width={64} height={64}
                         className="committee-icon"
-                        src="/his-global-conclave-edition-2/images/un_emblem.png"
+                        src="/images/un_emblem.png"
                         alt=""
                         style={{ zIndex: 2 }}
                     />
