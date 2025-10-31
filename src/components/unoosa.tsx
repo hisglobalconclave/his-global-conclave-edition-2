@@ -10,7 +10,7 @@ export default function Unoosa() {
             <div className="relative lg:min-h-[650px] w-full max-w-[275px] items-center flex flex-col justify-start mx-10 mt-20 mb-8 lg:mb-0">
                 <div className="flex flex-col items-center">
                     <Image
-                        src="/his-global-conclave-edition-2/images/un_emblem.png"
+                        src="/images/un_emblem.png"
                         alt="UN Emblem"
                         width={200}
                         height={200}
@@ -30,7 +30,7 @@ export default function Unoosa() {
                 <iframe src="https://drive.google.com/file/d/1FuThCpiTFnfQ-sjlXKJeeprtPmC_ypxf/preview" className="w-full min-w-[300px] max-w-[500px] h-full min-h-[700px]" />
 
                 <div className="flex justify-center text-center mt-10">
-                    <a href="/his-global-conclave-edition-2/bg-guide/UNOOSA-BG-V2.pdf" download>
+                    <a href="/bg-guide/UNOOSA-BG-V2.pdf" download>
                     <HoverBorderGradient
                         className="mono-label text-sm 2xl:text-xl"
                     >
@@ -45,19 +45,19 @@ export default function Unoosa() {
                         name="Gautham Vanan"
                         title="Chairperson"
                         description="Chairperson: UNOOSA"
-                        src="/his-global-conclave-edition-2/images/team_members/unoosa-chair.webp"
+                        src="/images/team_members/unoosa-chair.webp"
                     />
                     <ExpandableCard
                         name="Keshav Rajesh"
                         title="Vice-Chairperson"
                         description="Vice-Chairperson: UNOOSA"
-                        src="/his-global-conclave-edition-2/images/team_members/unoosa-vice-chair-p1.webp"
+                        src="/images/team_members/unoosa-vice-chair-p1.webp"
                     />
                     <ExpandableCard
                         name="Vasumithra G.Y"
                         title="Vice-Chairperson"
                         description="Vice-Chairperson: UNOOSA"
-                        src="/his-global-conclave-edition-2/images/team_members/unoosa-vice-chair-p2.webp"
+                        src="/images/team_members/unoosa-vice-chair-p2.webp"
                     />
             </div>
         </div>
