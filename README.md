@@ -35,8 +35,8 @@ The website is now live and accessible at:
   Grade 12, Batch 2025-26, Hindustan International School, Karapakkam
 
 - **Bug Testing & Issue Reporting:**  
-  👨‍💻 [Keshav Rajesh](https://github.com/swdbrn)  
+  👨‍💻 Keshav Rajesh  
   Grade 12, Batch 2025-26, Hindustan International School, Karapakkam
 
-  👨‍💻 Gautham Vanan
+  👨‍💻 Gautham Vanan  
   Grade 12, Batch 2025-26, Hindustan International School, Karapakkam
