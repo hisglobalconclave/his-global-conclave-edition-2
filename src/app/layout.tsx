@@ -11,16 +11,33 @@ const rubik = Rubik({
 
 
 export const metadata: Metadata = {
-  title: 'HIS Global Conclave Edition 2 - Homepage',
-  description: 'The HIS Global Conclave is an exciting Model United Nations (MUN) conducted by us at Hindustan International School, Chennai. It invites students to discuss global challenges and propose innovative solutions.',
-  keywords: 'Model United Nations, MUN, HIS Global Conclave, Hindustan International Scrool Karapakkam, International Relations, Diplomacy, Global Issues, Student Conference, Education, Debate, Public Speaking, Leadership, Critical Thinking',
-  authors: [{name: 'Bhuvanaesh R', url: 'https://www.linkedin.com/in/bhuvanaesh-r-456372343/'}, {name: 'Keshav Rajesh'}],
-  creator: '---- IGNORE ----',
+  title: 'HIS Global Conclave Edition 2',
+  description: 'The HIS Global Conclave Edition 2 is an exciting Model United Nations (MUN) conducted by us at Hindustan International School, Chennai. It invites students to discuss global challenges and propose innovative solutions.',
+  keywords: 'Model United Nations, MUN, HIS Global Conclave Edition 2, Hindustan International School Karapakkam, International Relations, Diplomacy, Global Issues, Student Conference, Education, Debate, Public Speaking, Leadership, Critical Thinking',
+  authors: [{name: 'Bhuvanaesh R', url: 'https://www.linkedin.com/in/bhuvanaesh-r/'}, {name: 'Keshav Rajesh'}],
+  creator: 'Hindustan International School, Karapakkam',
   openGraph: {
-    title: 'HIS Global Conclave Edition 2 - Homepage',
-    description: 'The HIS Global Conclave is an exciting Model United Nations (MUN) conducted by us at Hindustan International School, Chennai. It invites students to discuss global challenges and propose innovative solutions.',
-    url: 'To be added later',
+    title: 'HIS Global Conclave Edition 2',
+    description: 'HIS Global Conclave Edition 2 is an MUN at Hindustan International School - Chennai, tackling global challenges.',
+    url: 'https://his-global-conclave-edition-2.vercel.app/',
+    
+    images: [
+      {
+        url: '/images/opengraph-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Website Preview Image',
+      },
+    ],
+    locale: 'en_IN',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: {
+      url: '/images/opengraph-image.png',
+      alt: 'Website Preview Image',
+    },
   },
 };
 
