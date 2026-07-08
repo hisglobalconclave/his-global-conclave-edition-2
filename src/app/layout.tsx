@@ -11,16 +11,16 @@ const rubik = Rubik({
 
 
 export const metadata: Metadata = {
-  title: 'HIS Global Conclave Edition 2',
-  description: 'The HIS Global Conclave Edition 2 is an exciting Model United Nations (MUN) conducted by us at Hindustan International School, Chennai. It invites students to discuss global challenges and propose innovative solutions.',
+  title: 'HIS Global Conclave Edition 2 | Model United Nations',
+  description: 'HIS Global Conclave Edition 2 is an exciting Model United Nations at Hindustan International School - Chennai, where students tackle global challenges with innovative solutions.',
   keywords: 'Model United Nations, MUN, HIS Global Conclave Edition 2, Hindustan International School Karapakkam, International Relations, Diplomacy, Global Issues, Student Conference, Education, Debate, Public Speaking, Leadership, Critical Thinking',
   authors: [{name: 'Bhuvanaesh R', url: 'https://www.linkedin.com/in/bhuvanaesh-r/'}, {name: 'Keshav Rajesh'}],
   creator: 'Hindustan International School, Karapakkam',
   openGraph: {
-    title: 'HIS Global Conclave Edition 2',
+    title: 'HIS Global Conclave Edition 2 | Model United Nations',
     description: 'HIS Global Conclave Edition 2 is an MUN at Hindustan International School - Chennai, tackling global challenges.',
     url: 'https://his-global-conclave-edition-2.vercel.app/',
-    
+    siteName: 'HIS Global Conclave Edition 2',
     images: [
       {
         url: '/images/opengraph-image.png',
