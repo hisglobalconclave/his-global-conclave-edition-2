@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
+import { Analytics } from '@vercel/analytics/next';
 
 
 const rubik = Rubik({
@@ -52,6 +53,7 @@ export default function RootLayout({
         className={`${rubik.variable} ${rubik.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
