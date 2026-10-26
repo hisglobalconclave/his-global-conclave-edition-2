@@ -15,13 +15,15 @@ export default function Unoosa() {
                         width={200}
                         height={200}
                     />
-                    <h2 className="mono-label text-lg font-semibold mt-4">UNOOSA</h2>
+                    <h2 className="mono-label text-lg font-semibold mt-4">TNLA</h2>
                 </div>
                 <div className="mt-5 mb-5 lg:mt-20 text-center md:text-left">
                     <h2 className="mono-label text-lg font-semibold mt-8 mb-4">Agenda</h2>
                     <p>
-                    Topic 1:<br /> The Approach to Manned Space Missions to Mars <br /><br />
-                    Topic 2:<br /> The Militarization of Space – Threats and Opportunities
+                   <br> SDG 10 – Reduced Inequalities<br/>
+<br>Agenda: Discussion on the Central Delimitation Policy<br/>
+Participants will take part in a legislative simulation exploring delimitation, political representation and
+its implications for governance.
                     </p>
                 </div>
             </div>
