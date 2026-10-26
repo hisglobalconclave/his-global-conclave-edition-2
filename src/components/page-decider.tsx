@@ -1,11 +1,11 @@
 import Hero from '@/components/hero';
-import Unesco from '@/components/unesco';
-import Disec from '@/components/disec';
-import Unhcr from '@/components/unhcr';
-import Unsc from '@/components/unsc';
-import Unoosa from '@/components/unoosa';
-import Unodc from '@/components/unodc';
-import Ecosoc from '@/components/ecosoc';
+import who from '@/components/unesco';
+import unsc from '@/components/disec';
+import ecosoc from '@/components/unhcr';
+import disec from '@/components/unsc';
+import unhrc from '@/components/unoosa';
+import tnla from '@/components/unodc';
+import g20 from '@/components/ecosoc';
 
 export interface PageDeciderProps {
     renderPage: 'hero' | 'who' | 'unsc' | 'ecosoc' | 'disec' | 'unhrc' | 'tnla' | 'g20';
