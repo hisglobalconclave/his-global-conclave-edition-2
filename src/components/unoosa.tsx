@@ -46,7 +46,7 @@ its implications for governance.
                     <ExpandableCard
                         name="Gautham Vanan"
                         title="Chairperson"
-                        description="Chairperson: UNOOSA"
+                        description="Chairperson: TNLA"
                         src="/images/team_members/unoosa-chair.webp"
                     />
                     <ExpandableCard
