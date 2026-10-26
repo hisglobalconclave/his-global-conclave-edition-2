@@ -119,7 +119,7 @@ export default function MinimalHero() {
                 Edition
               </span>
               <span className="word" data-delay="1850">
-                2
+                3
               </span>
             </div>
             <div
