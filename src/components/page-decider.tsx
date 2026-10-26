@@ -8,25 +8,25 @@ import Unodc from '@/components/unodc';
 import Ecosoc from '@/components/ecosoc';
 
 export interface PageDeciderProps {
-    renderPage: 'hero' | 'unesco' | 'unhcr' | 'unodc' | 'unsc' | 'unoosa' | 'disec' | 'ecosoc';
+    renderPage: 'hero' | 'who' | 'unsc' | 'ecosoc' | 'disec' | 'unhrc' | 'tnla' | 'g20';
 }
 
 const renderedPage = (renderPage: string) => {
     switch (renderPage) {
-        case 'unhcr':
-            return <Unhcr />;
-        case 'unodc':
-            return <Unodc />;
+        case 'who':
+            return <who />;
         case 'unsc':
-            return <Unsc />;
-        case 'unoosa':
-            return <Unoosa />;
-        case 'disec':
-            return <Disec />;
-        case 'unesco':
-            return <Unesco />;
+            return <unsc />;
         case 'ecosoc':
-            return <Ecosoc />;
+            return <ecosoc />;
+        case 'disec':
+            return <disec />;
+        case 'unhrc':
+            return <unhrc />;
+        case 'tnla':
+            return <tnla />;
+        case 'g20':
+            return <g20 />;
         case 'hero':
             return <Hero />;
         default:
